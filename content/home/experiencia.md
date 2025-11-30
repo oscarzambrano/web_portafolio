@@ -13,7 +13,42 @@ widget = "custom"
 weight = 15
 
 +++
-* **Servicios Equifax Chile Ltda.**: _Marzo 2017 - Actualmente_. 
+
+* **NS Agro S.A.**: _[TEMPLATE: Completar fechas ej. Enero 2019 - Actualmente]_.
+  + **Cargo actual**:
+  _Subgerente Data Analytics e Inteligencia Artificial_ - [TEMPLATE: Fecha inicio - Actualmente]
+  + **Funciones**:
+  Liderar la estrategia y ejecución de iniciativas de Data Analytics e Inteligencia Artificial para el holding agroindustrial. Gestión de equipo de ciencia de datos. Arquitectura y gobierno de datos en plataformas SAP BTP y AWS. Desarrollo de soluciones de Machine Learning e IA Generativa para optimización de procesos de negocio.
+  + **Logros destacados**:
+    - **🏆 Ganador Torneo de Innovación SAP NOW Chile 2024**: Desarrollo de solución de IA Generativa con arquitectura No-Code/Low-Code. Prototipo funcional en 2 días. Clasificación para competencia regional LAC. [Ver referencias](https://laquintaemprende.cl/2024/09/ns-agro-gana-torneo-de-innovacion-en-sap-now-chile/)
+    - Implementación de arquitectura de datos moderna en SAP BTP Cloud Foundry Runtime con SAP HANA Cloud y Data Sphere
+    - Desarrollo de modelos de Machine Learning en producción usando SAP AI Core y AWS infrastructure
+    - Liderazgo de proyectos reconocidos por SAP a nivel corporativo ([NS Agro - SAP Success Story](https://news.sap.com/latinamerica/2025/01/ns-agro-lidera-transformacion-digital-de-martinez-y-valdivieso-con-sap-en-ia/))
+    - Participación en programa Early Adopter SAP HANA Vector Engine [TEMPLATE: Completar resultados]
+    - Diseño e implementación de dashboards ejecutivos en SAP Analytics Cloud
+  + **Stack Tecnológico**: SAP BTP Cloud Foundry, SAP HANA Cloud, SAP Data Sphere, SAP Analytics Cloud, SAP AI Core/Launchpad, AWS (EC2, ECR, S3), Docker, Posit Workbench, SAP BAS, Python, R, SQL
+  <hr></hr>
+
+* **NS Agro S.A.**: _[TEMPLATE: Completar fechas ej. Enero 2021 - Diciembre 2023]_.
+  + **Cargo anterior**:
+  _Jefe de Ciencia de Datos_
+  + **Funciones**:
+  [TEMPLATE: Descripción de responsabilidades como Jefe - ej: Gestión de equipo de analistas, desarrollo de modelos predictivos, implementación de pipelines de datos...]
+  + **Logros**:
+  [TEMPLATE: 3-4 logros específicos con métricas si es posible]
+  <hr></hr>
+
+* **NS Agro S.A.**: _[TEMPLATE: Completar fechas ej. Enero 2019 - Diciembre 2020]_.
+  + **Cargo inicial**:
+  _Data Scientist_
+  + **Funciones**:
+  [TEMPLATE: Descripción de responsabilidades como Data Scientist - ej: Análisis exploratorio de datos, desarrollo de modelos estadísticos, automatización de reportes...]
+  + **Logros**:
+  [TEMPLATE: 3-4 logros específicos]
+  <hr></hr>
+
+<!-- EXPERIENCIA ANTERIOR - Mantener o eliminar según prefieras -->
+* **Servicios Equifax Chile Ltda.**: _Marzo 2017 - [TEMPLATE: Completar fecha fin si aplica]_. 
   + **Cargo**: 
   _Analista de Datos_
   . Datos & Marketing Services, gerencia de operaciones.

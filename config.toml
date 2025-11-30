@@ -1,6 +1,6 @@
-baseurl = "/"  
-title = "Curriculum Vitae"
-copyright = "&copy; 2019 Oscar Zambrano"
+baseurl = "https://oscar-zambrano.netlify.app/"  # Actualizar con dominio final
+title = "Oscar Zambrano - Subgerente Data Analytics e IA"
+copyright = "&copy; 2019-2025 Oscar Zambrano"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = ""
@@ -11,7 +11,8 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+# TEMPLATE: Crear cuenta GA4 y agregar ID aquí (formato: G-XXXXXXXXXX)
+googleAnalytics = ""  # [TEMPLATE: G-XXXXXXXXXX]
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "es"
@@ -24,6 +25,14 @@ defaultContentLanguageInSubdir = true
   hrefTargetBlank = true
 
 [params]
+  # SEO Configuration
+  description = "Oscar Zambrano - Subgerente de Data Analytics e IA en NS Agro. Especialista en SAP BTP, Machine Learning e IA Generativa. Ganador Torneo de Innovación SAP NOW Chile 2024. Experto en transformación digital AgTech."
+  keywords = "Data Analytics, Inteligencia Artificial, SAP BTP, Machine Learning, IA Generativa, SAP HANA Cloud, AWS, AgTech, Data Science, Chile, Oscar Zambrano"
+
+  # Open Graph / Social Media
+  og_image = "/img/yo.png"
+  twitter_card = "summary"
+
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, or `coffee`.
   color_theme = "default"
@@ -34,14 +43,14 @@ defaultContentLanguageInSubdir = true
 
   # Your details.
   name = "Oscar Zambrano"
-  role = "Data Scientist"
+  role = "Subgerente Data Analytics e IA"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ {name="", url=""} ]
+  organizations = [ {name="NS Agro S.A.", url="https://nsagro.cl"} ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "Picture.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "yo.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "oscar.zambrano.cl@gmail.com"
   address = "Santiago RM, Chile."
   phone = "+56 9 986 44357"
@@ -145,11 +154,6 @@ defaultContentLanguageInSubdir = true
     link = "https://www.linkedin.com/in/oscarzambranoparra"
 
   [[params.social]]
-    icon = "google-plus"
-    icon_pack = "fa"
-    link = "https://plus.google.com/u/0/103661675455267658325"
-
-  [[params.social]]
     icon = "github"
     icon_pack = "fa"
     link = "https://github.com/oscarzambrano"
@@ -171,19 +175,24 @@ defaultContentLanguageInSubdir = true
   weight = 2
 
 [[menu.main]]
+  name = "Reconocimientos"
+  url = "#reconocimientos"
+  weight = 3
+
+[[menu.main]]
   name = "Habilidades"
   url = "#projects"
-  weight = 3
-  
+  weight = 4
+
 [[menu.main]]
   name = "Educación"
   url = "#educacion"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Contacto"
   url = "#contact"
-  weight = 5
+  weight = 6
 
 
 
