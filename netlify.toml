@@ -11,7 +11,7 @@
 [build.environment]
   # Hugo version - using latest stable extended version
   # Extended version is required for SCSS/SASS processing
-  HUGO_VERSION = "0.120.4"
+  HUGO_VERSION = "0.128.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
@@ -24,14 +24,14 @@
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.120.4"
+  HUGO_VERSION = "0.128.0"
 
 # Branch deploy configuration
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.120.4"
+  HUGO_VERSION = "0.128.0"
 
 # Redirect rules (optional - for SPA-like behavior)
 [[redirects]]
