@@ -18,7 +18,7 @@ weight = 15
   + **Cargo actual**:
   _Subgerente Data Analytics e Inteligencia Artificial_ - [TEMPLATE: Fecha inicio - Actualmente]
   + **Funciones**:
-  Liderar la estrategia y ejecución de iniciativas de Data Analytics e Inteligencia Artificial para el holding agroindustrial. Gestión de equipo de ciencia de datos. Arquitectura y gobierno de datos en plataformas SAP BTP y AWS. Desarrollo de soluciones de Machine Learning e IA Generativa para optimización de procesos de negocio.
+  Liderar la estrategia y ejecución de iniciativas de Data Analytics e Inteligencia Artificial para el holding empresarial. Gestión de equipo de ciencia de datos. Arquitectura y gobierno de datos en plataformas SAP BTP y AWS. Desarrollo de soluciones de Machine Learning e IA Generativa para optimización de procesos de negocio.
   + **Logros destacados**:
     - **🏆 Ganador Torneo de Innovación SAP NOW Chile 2024**: Desarrollo de solución de IA Generativa con arquitectura No-Code/Low-Code. Prototipo funcional en 2 días. Clasificación para competencia regional LAC. [Ver referencias](https://laquintaemprende.cl/2024/09/ns-agro-gana-torneo-de-innovacion-en-sap-now-chile/)
     - Implementación de arquitectura de datos moderna en SAP BTP Cloud Foundry Runtime con SAP HANA Cloud y Data Sphere

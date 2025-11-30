@@ -91,5 +91,5 @@ Participación en el programa Early Adopter de SAP HANA Vector Engine, tecnolog�
 Ejemplo:
 - **Fecha**: [TEMPLATE: ej. Octubre 2023]
 - **Evento**: [TEMPLATE: ej. SAP TechEd Virtual]
-- **Título**: [TEMPLATE: ej. "Implementación de ML en SAP BTP para AgTech"]
+- **Título**: [TEMPLATE: ej. "Implementación de ML en SAP BTP: Casos de Uso Empresariales"]
 - **Descripción**: [TEMPLATE: Breve descripción de la presentación]

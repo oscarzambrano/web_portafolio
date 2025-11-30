@@ -26,8 +26,8 @@ defaultContentLanguageInSubdir = true
 
 [params]
   # SEO Configuration
-  description = "Oscar Zambrano - Subgerente de Data Analytics e IA en NS Agro. Especialista en SAP BTP, Machine Learning e IA Generativa. Ganador Torneo de Innovación SAP NOW Chile 2024. Experto en transformación digital AgTech."
-  keywords = "Data Analytics, Inteligencia Artificial, SAP BTP, Machine Learning, IA Generativa, SAP HANA Cloud, AWS, AgTech, Data Science, Chile, Oscar Zambrano"
+  description = "Oscar Zambrano - Subgerente de Data Analytics e IA en NS Agro. Especialista en SAP BTP, Machine Learning e IA Generativa. Ganador Torneo de Innovación SAP NOW Chile 2024. Experto en transformación digital empresarial."
+  keywords = "Data Analytics, Inteligencia Artificial, SAP BTP, Machine Learning, IA Generativa, SAP HANA Cloud, AWS, Data Science, Transformación Digital, Chile, Oscar Zambrano"
 
   # Open Graph / Social Media
   og_image = "/img/yo.png"

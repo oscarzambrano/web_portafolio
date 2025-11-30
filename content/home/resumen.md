@@ -17,7 +17,7 @@ weight = 5
     "IA Generativa & Large Language Models",
     "SAP Business Technology Platform",
     "Cloud Computing (SAP & AWS)",
-    "AgTech & Transformación Digital"
+    "Transformación Digital Empresarial"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -30,7 +30,7 @@ weight = 5
 
 ## Resumen
 
-Subgerente de Data Analytics e Inteligencia Artificial con más de 10 años de experiencia liderando la transformación digital en el sector agroindustrial. Especializado en arquitecturas de datos SAP (BTP Cloud Foundry, HANA Cloud, Data Sphere, Analytics Cloud) y soluciones de Machine Learning e IA Generativa en entornos cloud.
+Subgerente de Data Analytics e Inteligencia Artificial con más de 10 años de experiencia liderando la transformación digital empresarial. Especializado en arquitecturas de datos SAP (BTP Cloud Foundry, HANA Cloud, Data Sphere, Analytics Cloud) y soluciones de Machine Learning e IA Generativa en entornos cloud.
 
 **Logro destacado 2024:** Ganador del Torneo de Innovación SAP NOW Chile, desarrollando una solución de IA Generativa con arquitectura No-Code/Low-Code que clasificó para representar a Chile en la competencia regional LAC.
 

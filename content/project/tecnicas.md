@@ -130,11 +130,11 @@ caption = "Oscar Zambrano"
 
 ## Dominio de Negocio
 
-### AgTech & Agroindustria
-- Análisis de cadena de suministro agrícola
-- Optimización de inventarios
-- Predicción de demanda estacional
-- Análisis de mercados agrícolas
+### Análisis Empresarial
+- Análisis de cadena de suministro
+- Optimización de inventarios y logística
+- Predicción de demanda
+- Análisis de mercados y tendencias
 
 ### Transformación Digital
 - Identificación de casos de uso de IA
