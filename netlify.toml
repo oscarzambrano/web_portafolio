@@ -1,77 +1,59 @@
-# Netlify Build Configuration for Hugo Site
-# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
-
 [build]
-  # Directory that contains the deploy-ready HTML files and assets
+  command = """
+    set -e
+    echo "=== Starting Blog build process ==="
+    echo "Node version: $(node --version)"
+    echo "pnpm version: $(pnpm --version)"
+    echo "Hugo version: $(hugo version)"
+    echo "Go version: $(go version || echo 'Go not available')"
+    
+    echo "=== Installing dependencies ==="
+    pnpm install --verbose --no-frozen-lockfile
+    
+    echo "=== Running Hugo build ==="
+    hugo --gc --minify -b $URL --logLevel debug --printI18nWarnings --printPathWarnings
+    
+    echo "=== Running Pagefind indexing ==="
+    pnpm dlx pagefind --source 'public' --verbose
+    
+    echo "=== Build completed successfully ==="
+  """
   publish = "public"
 
-  # Command to build the site
-  command = "hugo --gc --minify"
-
 [build.environment]
-  # Hugo version - compatible with Hugo Academic theme
-  # Extended version is required for SCSS/SASS processing
-  # Note: v0.120.4 is the sweet spot - modern but Academic-compatible
-  HUGO_VERSION = "0.120.4"
-  HUGO_ENV = "production"
+  HUGO_VERSION = "0.152.2"
+  GO_VERSION = "1.21.5"
+  NODE_VERSION = "22"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_LOG_I18N_WARNINGS = "true"
+  HUGO_LOG_WARNINGS = "true"
+  FORCE_COLOR = "1"
+  PNPM_LOG_LEVEL = "debug"
 
 [context.production.environment]
   HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
 
-# Deploy previews configuration
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = """
+    set -e
+    echo "=== Deploy Preview Build ==="
+    echo "Deploy URL: $DEPLOY_PRIME_URL"
+    pnpm install --verbose --no-frozen-lockfile
+    hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --logLevel debug --printI18nWarnings --printPathWarnings
+    pnpm dlx pagefind --source 'public' --verbose
+  """
 
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.120.4"
-
-# Branch deploy configuration
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = """
+    set -e
+    echo "=== Branch Deploy Build ==="
+    echo "Deploy URL: $DEPLOY_PRIME_URL"
+    pnpm install --verbose --no-frozen-lockfile
+    hugo --gc --minify -b $DEPLOY_PRIME_URL --logLevel debug --printI18nWarnings --printPathWarnings
+    pnpm dlx pagefind --source 'public' --verbose
+  """
 
-[context.branch-deploy.environment]
-  HUGO_VERSION = "0.120.4"
-
-# Redirect rules (optional - for SPA-like behavior)
-[[redirects]]
-  from = "/es/*"
-  to = "/es/:splat"
-  status = 200
-
-# Headers for security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
-# Cache static assets
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/img/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/fonts/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HTML files - shorter cache
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[[plugins]]
+  package = "netlify-plugin-hugo-cache-resources"
+  [plugins.inputs]
+    debug = true
