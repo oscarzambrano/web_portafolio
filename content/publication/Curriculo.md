@@ -6,6 +6,7 @@ image_preview = "santiago.jpg"
 math = true
 publication = ""
 publication_short = ""
+publication_types = ["0"]
 selected = true
 title = "Curriculum"
 url_word = "#"
