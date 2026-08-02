@@ -11,7 +11,7 @@ sections:
     content:
       username: admin
     design:
-      date_format: '2006'
+      date_format: 'January 2006'
       is_education_first: false
 
   - block: resume-skills

@@ -13,9 +13,11 @@ sections:
     content:
       username: admin
       text: ''
+      # El PDF se genera con `node tools/cv/build-cv.mjs` y se commitea:
+      # Netlify no tiene navegador en el build. Regenéralo si cambia el perfil.
       button:
-        text: Hablemos
-        url: 'mailto:oscar.zambrano.cl@gmail.com'
+        text: Descargar CV
+        url: '/cv/oscar-zambrano-cv.pdf'
       headings:
         about: 'Perfil'
         education: 'Formación'

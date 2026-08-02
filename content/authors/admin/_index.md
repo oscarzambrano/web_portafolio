@@ -84,6 +84,41 @@ work:
       Modelado estadístico, analítica de negocio y desarrollo de tableros para
       la gerencia.
 
+  - position: Analista de Datos
+    company_name: Equifax Chile
+    date_start: '2017-03-01'
+    date_end: '2019-01-01'
+    summary: |
+      Datos & Marketing Services, gerencia de operaciones. Aseguré y optimicé
+      los procesos periódicos de actualización de bases de datos y de entrega
+      de datos a cliente.
+
+      - Automatización de procesos de actualización de datos desde la web.
+      - Aplicación en Shiny (R) para enriquecimiento, cruce y extracción de datos.
+      - Tableros de reportería operacional para la gerencia.
+
+  - position: Analista Estadístico
+    company_name: Data Conversion Service
+    date_start: '2016-10-01'
+    date_end: '2017-03-01'
+    summary: |
+      Proyecto para Emaresa. Extracción y depuración de datos para el análisis,
+      y reportería de avance del proyecto. Diseñé una aplicación en Shiny (R)
+      que generaba automáticamente las planillas de entrega.
+
+  - position: Estadístico Jr.
+    company_name: AC Nielsen Chile
+    date_start: '2016-01-01'
+    date_end: '2016-09-01'
+    summary: |
+      Proyecto de ocho meses en el equipo de Behavioral Methods, para un estudio
+      de mercado en México. Evalué el riesgo de sesgo muestral ante la
+      incorporación de nuevas tecnologías de medición.
+
+      - Detección de heterogeneidad de poblaciones con regresión logística.
+      - Segmentación mediante análisis de clúster.
+      - Aplicación en R para análisis de datos y construcción de perfiles.
+
 # Capacidades.
 #   Sin `percent`: las barras de porcentaje no comunican nada verificable.
 #   Ver docs/HANDOFF.md §5.

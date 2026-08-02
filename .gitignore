@@ -15,3 +15,6 @@
 # Generado por Hugo para el soporte de JS en editores
 /assets/jsconfig.json
 hugo_stats.json
+
+# Copia de trabajo del generador de CV
+/tools/cv/avatar.jpg

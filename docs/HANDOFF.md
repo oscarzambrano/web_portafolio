@@ -26,9 +26,9 @@
    por la cuenta de Oscar. Regla vigente:
    - Cualquier dato biográfico que no esté en este documento ni en el repo se
      pregunta a Oscar. Sigue prohibido inventar.
-   - El contenido 2012-2019 del repo es **historial propio verificado**, pero
-     **requiere confirmación explícita de Oscar antes de publicarse** — puede ser
-     real y aun así quedar fuera del sitio por decisión editorial.
+   - El contenido 2012-2019 del repo es **historial propio verificado**, y Oscar
+     ya autorizó publicar AC Nielsen, Data Conversion Service (Emaresa) y
+     Equifax. El resto de esa etapa queda fuera por decisión suya (§1.2).
    - El hueco real es **2019 → 2026** (etapa NS Agro / Martínez y Valdivieso).
      El repo no contiene nada de ese periodo: la cronología confirmada por Oscar
      está en §1.3 y es la única fuente válida para esos años.
@@ -94,7 +94,13 @@ template `academic-cv`), `config/_default/{hugo,params,languages,menus,module}.y
 leyó de aquí. El riesgo es el opuesto al que suponía el borrador — no hay un CV
 falso, hay **un hueco de ~7 años**.
 
-**Acción:** pregunta 1 de §8. Hasta que Oscar confirme, no publiques esta etapa.
+**Acción:** ✅ **RESUELTO el 2026-08-02.** Oscar confirmó que el historial es
+suyo y autorizó publicar tres etapas: **AC Nielsen, Data Conversion Service
+(Emaresa) y Equifax**. Ya están en el sitio y en el CV.
+
+Quedan **fuera por decisión editorial** (no las añadas sin pedírselo): Comercial
+"El Punto Solidario", la pasantía en Petróleos de Venezuela y la preparaduría en
+la Escuela de Estadística de la ULA.
 
 ### 1.3 Perfil del propietario (confirmado por Oscar)
 
@@ -629,8 +635,14 @@ Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
    que mover la rama de producción a una estable y borrar la de Claude.
 2. **Foto actual.** La que se usa es de 2015. Es la mejor disponible, no una
    buena foto.
-3. **CV en PDF vigente.** No hay ninguno; por eso se retiró el botón.
+3. ~~CV en PDF vigente.~~ ✅ Hecho: `static/cv/oscar-zambrano-cv.pdf`, generado
+   con `node tools/cv/build-cv.mjs` desde `tools/cv/cv.html`. El botón
+   "Descargar CV" de la portada apunta ahí. **Si cambias el perfil, regenéralo**
+   o el PDF se desfasa del sitio.
 4. **Lighthouse** contra producción, una vez desplegado.
-5. **Etapa 2012-2019** (§1.5): sigue fuera del sitio, a la espera de la decisión
-   editorial de Oscar. Hoy el sitio salta de la titulación (2014) a 2019.
+5. ~~Etapa 2012-2019.~~ ✅ Publicadas AC Nielsen, Data Conversion Service
+   (Emaresa) y Equifax. La trayectoria ya es continua de 2016 a hoy.
 6. **Certificaciones SAP e idiomas**: no se publican por falta de datos.
+7. **Meses de los cargos en NS Agro**: Oscar dio años (2019, 2020, 2024). El
+   sitio y el CV muestran enero como mes de inicio porque el formato de fecha
+   exige un mes. **Confirmar con Oscar** si alguno cae en otro mes.

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Oscar Zambrano — CV</title>
+<style>
+  /* Fuente del sistema disponible en el contenedor de build. */
+  :root {
+    --tinta:   #111827;
+    --suave:   #4b5563;
+    --tenue:   #6b7280;
+    --acento:  #4f46e5;
+    --linea:   #e5e7eb;
+  }
+
+  @page { size: A4; margin: 14mm 15mm; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+    color: var(--tinta);
+    font-size: 10pt;
+    line-height: 1.45;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Encabezado ─────────────────────────────────────────────────────── */
+  header { display: flex; gap: 14mm; align-items: center; margin-bottom: 7mm; }
+  .retrato { width: 30mm; height: 30mm; border-radius: 50%; object-fit: cover; flex: none; }
+  h1 { font-size: 22pt; margin: 0 0 1mm; letter-spacing: -0.4pt; }
+  .cargo { color: var(--acento); font-size: 12pt; font-weight: 700; margin: 0 0 1mm; }
+  .empresa { color: var(--suave); margin: 0 0 2.5mm; }
+  .contacto { color: var(--suave); font-size: 9pt; }
+  .contacto a { color: var(--suave); text-decoration: none; }
+  .contacto span + span::before { content: "  ·  "; color: var(--linea); }
+
+  /* ── Secciones ──────────────────────────────────────────────────────── */
+  h2 {
+    font-size: 9.5pt; text-transform: uppercase; letter-spacing: 1.1pt;
+    color: var(--acento); margin: 6mm 0 2.5mm; padding-bottom: 1.2mm;
+    border-bottom: 0.5pt solid var(--linea);
+  }
+  section { break-inside: auto; }
+  p { margin: 0 0 2mm; }
+  .perfil { color: var(--suave); }
+
+  /* ── Puestos ────────────────────────────────────────────────────────── */
+  .puesto { margin-bottom: 4mm; break-inside: avoid; }
+  .puesto-cab { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+  .puesto h3 { font-size: 10.5pt; margin: 0; }
+  .fechas { color: var(--tenue); font-size: 8.5pt; white-space: nowrap; }
+  .org { color: var(--suave); font-size: 9pt; margin: 0.4mm 0 1.2mm; }
+  .puesto p { color: var(--suave); margin: 0 0 1.2mm; }
+  ul { margin: 0; padding-left: 4.5mm; color: var(--suave); }
+  li { margin-bottom: 0.6mm; }
+
+  /* ── Capacidades ────────────────────────────────────────────────────── */
+  .cap { display: grid; grid-template-columns: 34mm 1fr; gap: 2mm 4mm; }
+  .cap dt { font-weight: 700; font-size: 9.5pt; }
+  .cap dd { margin: 0; color: var(--suave); }
+
+  a { color: var(--acento); }
+  .fuente { font-size: 8.5pt; color: var(--tenue); }
+  .fuente a { color: var(--tenue); }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="retrato" src="avatar.jpg" alt="">
+  <div>
+    <h1>Oscar Zambrano</h1>
+    <p class="cargo">Subgerente de Data Analytics e Inteligencia Artificial</p>
+    <p class="empresa">Martínez y Valdivieso (NS&nbsp;Agro) — Santiago, Chile</p>
+    <p class="contacto">
+      <span><a href="mailto:oscar.zambrano.cl@gmail.com">oscar.zambrano.cl@gmail.com</a></span>
+      <span><a href="https://www.linkedin.com/in/oscarzambranoparra">linkedin.com/in/oscarzambranoparra</a></span>
+      <span><a href="https://www.oscarzambrano.name">oscarzambrano.name</a></span>
+    </p>
+  </div>
+</header>
+
+<section>
+  <h2>Perfil</h2>
+  <p class="perfil">
+    Estadístico con siete años liderando datos e inteligencia artificial en una
+    comercializadora de insumos agrícolas con operación en Chile y Perú. Trabajo
+    de punta a punta: modelado de datos en SAP HANA Cloud, modelos de machine
+    learning y LLMs en producción sobre SAP BTP, y la conversación con el negocio
+    que decide si un modelo sirve o sobra. Antes, seis años de analítica en
+    medición de mercado, servicios de datos y bureau de crédito.
+  </p>
+</section>
+
+<section>
+  <h2>Experiencia</h2>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Subgerente de Data Analytics e Inteligencia Artificial</h3>
+      <span class="fechas">2024 — actualidad</span>
+    </div>
+    <p class="org">Martínez y Valdivieso (NS Agro)</p>
+    <p>Dirijo la práctica de datos e IA del grupo.</p>
+    <ul>
+      <li>Modelos de machine learning y LLMs en producción sobre SAP BTP.</li>
+      <li>Arquitectura de datos sobre SAP HANA Cloud y SAP Business Data Cloud.</li>
+      <li>Analítica para un negocio de márgenes estrechos, donde cada variable comercial pesa en la rentabilidad.</li>
+    </ul>
+  </div>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Jefatura de Data Analytics y Data Science</h3>
+      <span class="fechas">2020 — 2024</span>
+    </div>
+    <p class="org">NS Agro</p>
+    <p>
+      Formé y lideré el departamento, con un equipo de dos personas. Consolidé la
+      analítica corporativa sobre plataforma SAP y llevé los primeros modelos
+      predictivos a producción.
+    </p>
+  </div>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Data Scientist</h3>
+      <span class="fechas">2019 — 2020</span>
+    </div>
+    <p class="org">NS Agro</p>
+    <p>Modelado estadístico, analítica de negocio y tableros para la gerencia.</p>
+  </div>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Analista de Datos</h3>
+      <span class="fechas">marzo 2017 — 2019</span>
+    </div>
+    <p class="org">Equifax Chile — Datos &amp; Marketing Services, gerencia de operaciones</p>
+    <p>
+      Aseguré y optimicé los procesos periódicos de actualización de bases de
+      datos y de entrega de datos a cliente.
+    </p>
+    <ul>
+      <li>Automatización de procesos de actualización de datos desde la web.</li>
+      <li>Aplicación en Shiny (R) para enriquecimiento, cruce y extracción de datos.</li>
+      <li>Tableros de reportería operacional para la gerencia.</li>
+    </ul>
+  </div>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Analista Estadístico</h3>
+      <span class="fechas">octubre 2016 — marzo 2017</span>
+    </div>
+    <p class="org">Data Conversion Service — proyecto para Emaresa</p>
+    <p>
+      Extracción y depuración de datos para el análisis, y reportería de avance
+      del proyecto. Diseñé una aplicación en Shiny (R) que generaba
+      automáticamente las planillas de entrega.
+    </p>
+  </div>
+
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Estadístico Jr.</h3>
+      <span class="fechas">enero — septiembre 2016</span>
+    </div>
+    <p class="org">AC Nielsen Chile — Behavioral Methods</p>
+    <p>
+      Proyecto de ocho meses para un estudio de mercado en México. Evalué el
+      riesgo de sesgo muestral ante la incorporación de nuevas tecnologías de
+      medición.
+    </p>
+    <ul>
+      <li>Detección de heterogeneidad de poblaciones con regresión logística.</li>
+      <li>Segmentación mediante análisis de clúster.</li>
+      <li>Aplicación en R para análisis de datos y construcción de perfiles.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Reconocimientos</h2>
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Ganador del Torneo de Innovación — SAP NOW Chile</h3>
+      <span class="fechas">septiembre 2024</span>
+    </div>
+    <p>
+      NS Agro ganó la final frente a Arauco con una solución de IA generativa de
+      componente no-code/low-code, en un formato <em>reverse shark-tank</em> con
+      jurado de startups. El triunfo dio el paso a la fase regional de
+      Latinoamérica. Participé en el equipo ganador como científico de datos y
+      especialista en IA.
+    </p>
+    <p class="fuente">
+      SAP News Latinoamérica, septiembre 2024 · cobertura en Cooperativa, Tekios,
+      Gerencia e ITSitio Chile.
+    </p>
+  </div>
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Caso de cliente SAP — SAP HANA Cloud vector engine</h3>
+      <span class="fechas">2025</span>
+    </div>
+    <p>
+      Solución de precios asistidos por IA para una fuerza de venta en terreno:
+      el vendedor envía texto o audio, un bot transcribe y un modelo de machine
+      learning en SAP BTP arma la cotización usando el <em>vector engine</em> de
+      SAP HANA Cloud, con el precio calculado por cliente según pedido, historial
+      y clasificación crediticia.
+    </p>
+    <p class="fuente">
+      Publicado por SAP (2025) y recogido por SAP News Latinoamérica, Cooperativa,
+      Portal Agro Chile y BNamericas.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Formación</h2>
+  <div class="puesto">
+    <div class="puesto-cab">
+      <h3>Licenciatura en Estadística</h3>
+      <span class="fechas">2014</span>
+    </div>
+    <p class="org">Universidad de Los Andes, Mérida (Venezuela)</p>
+    <p>
+      Título legalizado ante el Ministerio de Relaciones Exteriores de Chile.
+      Series de tiempo, modelos econométricos, análisis multivariante, procesos
+      estocásticos y diseño de bases de datos.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Capacidades técnicas</h2>
+  <dl class="cap">
+    <dt>Plataforma SAP</dt>
+    <dd>SAP BTP (Cloud Foundry) · SAP HANA Cloud · SAP Business Data Cloud · SAP Fiori/UI5</dd>
+    <dt>Datos e IA</dt>
+    <dd>Machine learning en producción · LLMs e IA generativa · modelado estadístico</dd>
+    <dt>Lenguajes</dt>
+    <dd>Python · R · SQL</dd>
+  </dl>
+</section>
+
+</body>
+</html>
