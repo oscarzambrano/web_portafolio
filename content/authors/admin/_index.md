@@ -54,7 +54,7 @@ work:
   - position: Subgerente de Data Analytics e Inteligencia Artificial
     company_name: Martínez y Valdivieso (NS Agro)
     company_url: 'https://www.myv.cl/'
-    date_start: '2024-01-01'
+    date_start: '2024-03-01'
     date_end: ''
     summary: |2-
       Dirijo la práctica de datos e IA de una comercializadora de insumos
@@ -68,8 +68,8 @@ work:
   - position: Jefatura de Data Analytics y Data Science
     company_name: NS Agro
     company_url: 'https://www.nsagro.cl/'
-    date_start: '2020-01-01'
-    date_end: '2024-01-01'
+    date_start: '2020-12-01'
+    date_end: '2024-03-01'
     summary: |
       Formé y lideré el departamento de Data Analytics y Data Science, con un
       equipo de dos personas. Consolidé la analítica corporativa sobre
@@ -78,8 +78,8 @@ work:
   - position: Data Scientist
     company_name: NS Agro
     company_url: 'https://www.nsagro.cl/'
-    date_start: '2019-01-01'
-    date_end: '2020-01-01'
+    date_start: '2019-11-01'
+    date_end: '2020-12-01'
     summary: |
       Modelado estadístico, analítica de negocio y desarrollo de tableros para
       la gerencia.

@@ -116,15 +116,16 @@ la Escuela de Estadística de la ULA.
 
 | Desde | Cargo | Empresa |
 |---|---|---|
-| 2019 | **Data Scientist** | NS Agro |
-| 2020 | **Jefatura de Data Analytics y Data Science** (como departamento) | NS Agro |
-| 2024 | **Subgerente de Data Analytics e IA** | NS Agro → Martínez y Valdivieso (2026) |
+| noviembre 2019 | **Data Scientist** (hasta diciembre 2020) | NS Agro |
+| diciembre 2020 | **Jefatura de Data Analytics y Data Science** (como departamento) | NS Agro |
+| marzo 2024 | **Subgerente de Data Analytics e IA** | NS Agro → Martínez y Valdivieso (2026) |
 
 > ⚠️ Esto **corrige** el borrador original, que situaba el paso a Subgerente en
 > ~junio 2026 y hablaba de "~6 años". Son **7 años** de trayectoria continua
-> (2019→2026), con **~4 años en la Jefatura** (2020-2024) y el ascenso a
-> Subgerente en **2024**. Prevalece esta tabla sobre cualquier otra fuente,
-> incluida la rama sin desplegar (§2.6).
+> (desde noviembre 2019), con **~3 años y medio en la Jefatura**
+> (diciembre 2020 – marzo 2024) y el ascenso a Subgerente en **marzo 2024**.
+> Prevalece esta tabla sobre cualquier otra fuente, incluida la rama sin
+> desplegar (§2.6).
 
 - Lidera un equipo de **2 personas** desde su rol de Jefatura.
 - Base: Chile.
@@ -643,6 +644,6 @@ Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
 5. ~~Etapa 2012-2019.~~ ✅ Publicadas AC Nielsen, Data Conversion Service
    (Emaresa) y Equifax. La trayectoria ya es continua de 2016 a hoy.
 6. **Certificaciones SAP e idiomas**: no se publican por falta de datos.
-7. **Meses de los cargos en NS Agro**: Oscar dio años (2019, 2020, 2024). El
-   sitio y el CV muestran enero como mes de inicio porque el formato de fecha
-   exige un mes. **Confirmar con Oscar** si alguno cae en otro mes.
+7. ~~Meses de los cargos en NS Agro.~~ ✅ Confirmados por Oscar: ingreso en
+   noviembre 2019, Data Scientist hasta diciembre 2020, Subgerente desde
+   marzo 2024.
