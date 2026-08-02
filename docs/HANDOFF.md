@@ -60,8 +60,8 @@
 
 Detalle del proyecto Netlify:
 
-- Proyecto: **`warden-cat-68477`** — *no existe ningún proyecto llamado
-  `oscar-zambrano`*. URL primaria `https://www.oscarzambrano.name`.
+- Proyecto: **`oscar-zambrano`** (renombrado el 2026-08-02; antes
+  `warden-cat-68477`). URL primaria `https://www.oscarzambrano.name`.
 - Sin protección por password ni SSO (`requiresPassword: false`).
 - Deploy activo `692ce34c…`, `state: ready`, `context: production`, publicado
   **2025-12-01**, construido desde la rama `claude/analyze-repository-…`.
@@ -224,7 +224,7 @@ descarta, el sitio queda con 7 años de carrera y nada antes. Decisión de Oscar
 | 1 | El sitio emite `noindex` | 👁️ OBSERVADO | 🔶 Stub de alias de idioma en `/` (ver §2.2). **No es una variable de entorno de preview** | **P0** |
 | 2 | ~~HTML sin contenido → CSR~~ **Diagnóstico incorrecto** | ✅ VERIFICADO | **No hay renderizado en cliente.** Hugo es SSG puro. Lo que se sirvió en `/` es el stub de alias (§2.2) | **P0** |
 | 3 | Canonical apunta a `oscar-zambrano.netlify.app` | ✅ VERIFICADO | `baseurl` literal en `config.toml:1` del commit desplegado (§2.3) | **P1** |
-| 4 | `oscar-zambrano.netlify.app/es/` da 404 | ✅ VERIFICADO | Ese subdominio **no es de este proyecto** (§2.3) | **P1** |
+| 4 | ~~`oscar-zambrano.netlify.app/es/` da 404~~ | ✅ RESUELTO | Ese subdominio no era de este proyecto; el proyecto se renombró y ahora sí lo es (§2.3) | ~~P1~~ |
 | 5 | Verificar HTTPS forzado y HSTS | 🔶 HIPÓTESIS | El `netlify.toml` desplegado no define `Strict-Transport-Security` | **P1** |
 | 6 | 🆕 La rama de producción de Netlify es `claude/*` | ✅ VERIFICADO | Configuración del dashboard (§1.1) | **P1** |
 | 7 | 🆕 Migración a Hugo Blox terminada y sin desplegar | ✅ VERIFICADO | §1.1 estado C | **P1** |
@@ -288,13 +288,18 @@ confirmada y **el arreglo es de configuración, no de arquitectura**.
 baseurl = "https://oscar-zambrano.netlify.app/"  # Actualizar con dominio final
 ```
 
-El comentario delata un TODO que nunca se cerró. Y `oscar-zambrano.netlify.app`
-**no es el subdominio de este proyecto** — el de verdad es
-`warden-cat-68477.netlify.app`. Por eso da 404 accedido directo.
+El comentario delata un TODO que nunca se cerró. Y en ese momento
+`oscar-zambrano.netlify.app` **no era el subdominio de este proyecto** — el
+proyecto se llamaba `warden-cat-68477`. Por eso daba 404 accedido directo.
 
-Es decir: el canonical **no divide la señal SEO entre dos dominios propios; apunta
-a un origen ajeno o inexistente**, que es estrictamente peor. Arreglo: `baseURL`
-al dominio propio.
+Es decir: el canonical no dividía la señal SEO entre dos dominios propios;
+apuntaba a un origen ajeno, que es estrictamente peor.
+
+✅ **RESUELTO el 2026-08-02** por partida doble: el `baseURL` ahora es el dominio
+propio (única fuente de verdad, ver `config/_default/hugo.yaml`), y el proyecto
+de Netlify se renombró a `oscar-zambrano`, así que ese subdominio ya pertenece a
+este sitio. Netlify redirige el subdominio `*.netlify.app` al dominio primario
+cuando hay uno configurado, de modo que no queda contenido duplicado.
 
 En `master` el defecto es distinto y también grave: `baseurl = "/"` (desde
 `91082cb`, 2017-10-14, que reemplazó `oscarzambrano.name/` en vez de corregirle
@@ -625,6 +630,15 @@ warnings.**
   (1,7 MB sin uso), `themes/`, `MyCV.Rproj`, `index.Rmd` y las imágenes viejas.
   El árbol de trabajo pasó de ~12 MB a ~250 KB.
 
+### Netlify
+
+- Proyecto renombrado de `warden-cat-68477` a **`oscar-zambrano`**.
+- Build reproducido en local tal como lo hará Netlify (`npm ci --omit=dev` +
+  `hugo --gc --minify`): limpio.
+- Se unificó el gestor de paquetes en npm. El repositorio declaraba pnpm pero
+  el lockfile era de npm, lo que podía hacer que Netlify resolviera versiones
+  distintas o fallara en la detección.
+
 ### Responsive verificado
 
 Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
@@ -632,8 +646,13 @@ Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
 
 ### Lo que queda pendiente
 
-1. **Desplegar.** Netlify sigue apuntando a `claude/analyze-repository-…`. Hay
-   que mover la rama de producción a una estable y borrar la de Claude.
+1. **Desplegar — lo único que bloquea.** Netlify sigue construyendo producción
+   desde `claude/analyze-repository-…`. Hay que cambiarlo a `master` **después**
+   de mergear, en el dashboard:
+   *Site configuration → Build & deploy → Branches and deploy contexts →
+   Production branch*. No se puede hacer por API: la integración MCP de Netlify
+   no expone esa opción. Cambiarlo antes del merge rompería el sitio, porque el
+   `master` actual es el Hugo Academic de 2019 y no tiene `netlify.toml`.
 2. **Foto actual.** La que se usa es de 2015. Es la mejor disponible, no una
    buena foto.
 3. ~~CV en PDF vigente.~~ ✅ Hecho: `static/cv/oscar-zambrano-cv.pdf`, generado

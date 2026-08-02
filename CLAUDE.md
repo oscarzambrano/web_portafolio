@@ -58,6 +58,8 @@ hugo server                 # desarrollo
 
 ## Pendiente
 
-Netlify todavía sirve producción desde la rama
-`claude/analyze-repository-01W9PueHh1syph6jLPL8gpFg`. Hay que moverlo a una rama
-estable. Ver §9 del handoff para el resto.
+Netlify (proyecto `oscar-zambrano`) todavía construye producción desde la rama
+`claude/analyze-repository-01W9PueHh1syph6jLPL8gpFg`. Hay que cambiarlo a
+`master` en el dashboard — *Site configuration → Build & deploy → Branches and
+deploy contexts* — y solo **después** de mergear, porque el `master` actual es
+el sitio de 2019 y no tiene `netlify.toml`. Ver §9 del handoff para el resto.
