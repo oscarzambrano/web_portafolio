@@ -56,10 +56,10 @@ hugo server                 # desarrollo
 - **El bloque `markdown` ignora `subtitle`.** Lo que pongas ahí no se ve.
 - **Sin barras de porcentaje en habilidades.** No comunican nada verificable.
 
-## Pendiente
+## Despliegue
 
-Netlify (proyecto `oscar-zambrano`) todavía construye producción desde la rama
-`claude/analyze-repository-01W9PueHh1syph6jLPL8gpFg`. Hay que cambiarlo a
-`master` en el dashboard — *Site configuration → Build & deploy → Branches and
-deploy contexts* — y solo **después** de mergear, porque el `master` actual es
-el sitio de 2019 y no tiene `netlify.toml`. Ver §9 del handoff para el resto.
+Netlify (proyecto `oscar-zambrano`) construye producción desde **`master`**.
+Cada push a `master` dispara un build: `npm ci --omit=dev` + `hugo --gc --minify`.
+
+Pendientes en §9 del handoff: foto profesional actual, Lighthouse contra
+producción y el envío del sitemap a Google Search Console.
