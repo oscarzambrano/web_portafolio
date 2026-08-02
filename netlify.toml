@@ -75,6 +75,21 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     # HTTPS obligatorio durante un año, subdominios incluidos.
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Cross-Origin-Opener-Policy = "same-origin"
+    # El sitio no usa ninguna de estas APIs. Se deniegan explícitamente.
+    Permissions-Policy = "accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), xr-spatial-tracking=()"
+    # Política de contenido estricta. Es viable porque el sitio no carga NADA
+    # externo: el CSS y el JS son propios y con hashes SRI, y no hay atributos
+    # `style=` inline. `unsafe-inline` en style-src es solo por los dos bloques
+    # <style> que emite el tema.
+    #
+    # Verificada con Chromium sobre el sitio construido: 0 violaciones y 0
+    # errores de consola en `/` y en `/experiencia/`.
+    #
+    # Si algún día añades un recurso externo (analítica, fuentes, un iframe),
+    # esta cabecera lo bloqueará. Es intencional: reevalúala en ese momento en
+    # vez de relajarla por costumbre.
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
 
 [[headers]]
   for = "/css/*"

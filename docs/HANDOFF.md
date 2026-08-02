@@ -633,6 +633,8 @@ warnings.**
 ### Netlify
 
 - Proyecto renombrado de `warden-cat-68477` a **`oscar-zambrano`**.
+- Rama de producción movida de `claude/analyze-repository-…` a **`master`**.
+  La rama generada quedó huérfana: puede borrarse.
 - Build reproducido en local tal como lo hará Netlify (`npm ci --omit=dev` +
   `hugo --gc --minify`): limpio.
 - Se unificó el gestor de paquetes en npm. El repositorio declaraba pnpm pero
@@ -646,13 +648,16 @@ Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
 
 ### Lo que queda pendiente
 
-1. **Desplegar — lo único que bloquea.** Netlify sigue construyendo producción
-   desde `claude/analyze-repository-…`. Hay que cambiarlo a `master` **después**
-   de mergear, en el dashboard:
-   *Site configuration → Build & deploy → Branches and deploy contexts →
-   Production branch*. No se puede hacer por API: la integración MCP de Netlify
-   no expone esa opción. Cambiarlo antes del merge rompería el sitio, porque el
-   `master` actual es el Hugo Academic de 2019 y no tiene `netlify.toml`.
+1. ~~Desplegar.~~ ✅ **Hecho el 2026-08-02.** PR #1 mergeado a `master`
+   (`1987e2e`) y rama de producción de Netlify cambiada a `master`. El deploy
+   `6a6fbb6a…` se publicó en 23 s: `state: ready`, `context: production`,
+   sin `error_message`, con 2 reglas de redirección y 8 de cabeceras
+   procesadas, y las tres páginas esperadas (`index`, `404`, `experiencia`).
+
+   ⚠️ **Sin verificar en vivo.** La política de red del contenedor bloquea
+   tanto `oscarzambrano.name` como `*.netlify.app`, así que no se pudo hacer
+   `curl` contra el sitio publicado. La comprobación de §7 sigue pendiente de
+   ejecutarse desde una red sin restricciones.
 2. **Foto actual.** La que se usa es de 2015. Es la mejor disponible, no una
    buena foto.
 3. ~~CV en PDF vigente.~~ ✅ Hecho: `static/cv/oscar-zambrano-cv.pdf`, generado
