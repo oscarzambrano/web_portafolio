@@ -29,8 +29,9 @@
    - El contenido 2012-2019 del repo es **historial propio verificado**, pero
      **requiere confirmación explícita de Oscar antes de publicarse** — puede ser
      real y aun así quedar fuera del sitio por decisión editorial.
-   - El hueco real es **2019 → 2026** (etapa NS Agro). Ahí no hay nada que
-     reutilizar: hay que pedírselo a Oscar.
+   - El hueco real es **2019 → 2026** (etapa NS Agro / Martínez y Valdivieso).
+     El repo no contiene nada de ese periodo: la cronología confirmada por Oscar
+     está en §1.3 y es la única fuente válida para esos años.
 
 3. **No publiques datos de NS Agro.** Sin cifras internas, nombres de clientes,
    esquemas HANA, endpoints BTP, nombres de subaccounts ni credenciales. Métricas
@@ -84,9 +85,10 @@ template `academic-cv`), `config/_default/{hugo,params,languages,menus,module}.y
   `oscarzambrano <oscar.zambrano.cl@gmail.com>`, el email de la cuenta de Oscar.
 - El mismo `config.toml` publica su LinkedIn (`oscarzambranoparra`), su GitHub
   (`oscarzambrano`), su teléfono y `© 2019 Oscar Zambrano`.
-- La cronología encaja con el perfil confirmado en §1.3: Lic. Estadística ULA
-  2014 → pasantía PDVSA → Chile 2016 (Nielsen) → Equifax 2017-2019 → NS Agro
-  ~2020-2026 (~6 años).
+- La cronología encaja sin costuras con el perfil confirmado en §1.3: Lic.
+  Estadística ULA 2014 → pasantía PDVSA → Chile 2016 (Nielsen) → Equifax
+  2017-2019 → **NS Agro desde 2019**. El CV del repo termina justo donde
+  empieza la etapa actual: es la misma carrera, sin solapamiento ni hueco.
 
 **Conclusión:** no es otro Oscar. El análisis previo no inventó ese perfil: lo
 leyó de aquí. El riesgo es el opuesto al que suponía el borrador — no hay un CV
@@ -96,22 +98,38 @@ falso, hay **un hueco de ~7 años**.
 
 ### 1.3 Perfil del propietario (confirmado por Oscar)
 
-- Oscar Zambrano — **Subgerente Data Analytics, NS Agro** (holding agrícola
-  chileno-peruano; filial operativa principal: Martínez y Valdivieso, myv.cl).
-- ~6 años en NS Agro con crecimiento progresivo: Analista → Jefe Data Analytics →
-  **Subgerente Data Analytics (~junio 2026)**.
-- Lidera un equipo de **2 personas** desde su rol de Jefe.
+**Nombre de la empresa — importante.** Desde **2026**, NS Agro pasa a llamarse
+**Martínez y Valdivieso** (myv.cl). Holding agrícola chileno-peruano.
+
+- En el sitio, el empleador **actual** se nombra **Martínez y Valdivieso**.
+- Los cargos de **2019 a 2025** se ejercieron bajo el nombre **NS Agro**; al
+  citarlos, usar ese nombre y aclarar la continuidad (p. ej. "NS Agro, hoy
+  Martínez y Valdivieso"). No reescribas la historia con el nombre nuevo.
+
+**Trayectoria (confirmada por Oscar 2026-08-02):**
+
+| Desde | Cargo | Empresa |
+|---|---|---|
+| 2019 | **Data Scientist** | NS Agro |
+| 2022 | **Jefatura de Data Analytics y Data Science** (como departamento) | NS Agro |
+| 2025 | **Subgerente de Data Analytics e IA** | NS Agro → Martínez y Valdivieso (2026) |
+
+> ⚠️ Esto **corrige** el borrador original, que situaba el paso a Subgerente en
+> ~junio 2026 y hablaba de "~6 años". Son **7 años** de trayectoria continua
+> (2019→2026) y el ascenso a Subgerente es de **2025**. Prevalece esta tabla.
+
+- Lidera un equipo de **2 personas** desde su rol de Jefatura.
 - Base: Chile.
 - Stack: SAP BTP Cloud Foundry, SAP HANA, SAP Business Data Cloud, SAP Fiori/UI5,
   Machine Learning, LLMs, Python, R, SQL.
-- Credencial pública destacable: NS Agro ganó el **SAP Innovation Tournament en
-  SAP NOW Chile (septiembre 2024)** con una solución de IA generativa; Oscar
+- Credencial pública destacable: la empresa ganó el **SAP Innovation Tournament
+  en SAP NOW Chile (septiembre 2024)** con una solución de IA generativa; Oscar
   aparece públicamente como Data Engineer del equipo ganador.
   → VERIFICAR el link de la fuente y usarlo como prueba social enlazada.
 
-**Vacíos a llenar con Oscar:** años exactos por cargo, certificaciones SAP
-vigentes, idiomas actualizados, y qué proyectos puede mostrar públicamente.
-*(La formación académica ya está documentada — ver §1.4.)*
+**Vacíos a llenar con Oscar:** certificaciones SAP vigentes, idiomas
+actualizados, y qué proyectos puede mostrar públicamente.
+*(Formación académica en §1.4; años por cargo ya resueltos arriba.)*
 
 ### 1.4 Trayectoria previa recuperable del repo (2012-2019)
 
@@ -134,7 +152,7 @@ editorial de Oscar antes de publicarse.
   Belt Lean (2018), Querying MS SQL Server (Sonda 2017).
 
 Esto es **la única historia larga que el sitio tiene hoy**. Si el rediseño la
-descarta, el sitio queda con ~6 años de carrera y nada antes. Decisión de Oscar.
+descarta, el sitio queda con 7 años de carrera y nada antes. Decisión de Oscar.
 
 ---
 
@@ -154,6 +172,10 @@ descarta, el sitio queda con ~6 años de carrera y nada antes. Decisión de Osca
 | 8 | 🆕 Contenido demo del tema vivo en el sitio | ✅ VERIFICADO | §2.4 | **P2** |
 | 9 | 🆕 Habilidades solo como imágenes | ✅ VERIFICADO | §2.5 | **P2** |
 | 10 | 🆕 `public/` commiteado, stale y contradictorio | ✅ VERIFICADO | §2.5 | **P2** |
+| 11 | 🆕 **La rama sin desplegar tiene email y LinkedIn equivocados** | ✅ VERIFICADO | §2.6 | **P0** |
+| 12 | 🆕 **La rama sin desplegar no compila** | ✅ VERIFICADO | §2.6 | **P0** |
+| 13 | 🆕 Fechas de cargos inventadas en la rama sin desplegar | ✅ VERIFICADO | §2.6 | **P0** |
+| 14 | 🆕 La rama sin desplegar es la plantilla demo de Hugo Blox | ✅ VERIFICADO | §2.6 | **P1** |
 
 ### 2.2 Hallazgos 1 y 2: una sola causa, y no es CSR
 
@@ -254,7 +276,74 @@ demo "Deep Learning" y páginas huérfanas de R Markdown (`nuevas.knit`,
   que añadirlos es un drop-in, no una reescritura de plantillas.
 - `fonts/` (1,7 MB) no lo lee Hugo: peso muerto.
 
-### 2.6 🆕 Revisar antes de republicar
+### 2.6 🆕 La rama sin desplegar NO es publicable como está
+
+✅ **VERIFICADO** construyendo el commit `49315c5` con Hugo Extended 0.152.2
+(2026-08-02). El commit del mensaje *"Migración completa: Hugo Academic → Hugo
+Blox"* es, en realidad, **la plantilla `academic-cv` de Hugo Blox con algunos
+datos encima** — y varios de esos datos son incorrectos.
+
+**a) No compila.** Hugo la rechaza antes de renderizar:
+
+```
+Error: failed to decode "languages": config value "es" for
+defaultContentLanguage does not match any language definition
+```
+
+`config/_default/hugo.yaml` declara `defaultContentLanguage: es`, pero
+`config/_default/languages.yaml` **solo define `en`**. Hay que definir `es` (o
+cambiar el idioma por defecto) antes de que la rama pueda desplegarse.
+
+**b) Datos de contacto equivocados — P0.** En
+`content/authors/admin/_index.md`:
+
+| Campo | En la rama | Correcto (§1.3, `master`) |
+|---|---|---|
+| Email | `oscarzambranoa@gmail.com` | `oscar.zambrano.cl@gmail.com` |
+| LinkedIn | `linkedin.com/in/oscarzambranoa` | `linkedin.com/in/oscarzambranoparra` |
+
+Un portafolio con el contacto equivocado es peor que no tener portafolio.
+**Corrige esto antes que cualquier otra cosa.**
+
+**c) Fechas de cargos inventadas.** La rama afirma Subgerente desde **enero
+2022**, "Jefe de Ciencia de Datos" 2020-2021 y Data Scientist solo durante 2019.
+Contrástalo con la tabla confirmada en §1.3: Subgerente es **2025** y la
+Jefatura **2022**. La titulación aparece fechada 2010-2015; `master` dice 2014.
+La bio abre con **"más de 10 años de experiencia"**, sin respaldo.
+
+**d) Otros problemas de contenido:**
+
+- Barras de porcentaje en habilidades (95 %, 90 %, **Machine Learning 100 %**),
+  justo lo que prohíbe §5. `experience.md` las oculta, pero los datos siguen ahí.
+- Premio *"SAP HANA Vector Engine Early Adopter"* citando
+  `news.sap.com/latinamerica/2025/01/ns-agro-lidera-innovacion-agricola/`.
+  **Verificar que esa URL exista** antes de publicarla.
+- El botón "Descargar CV" apunta al Google Drive de 2019, es decir, al CV de
+  Estadística. El sitio prometería un perfil SAP y entregaría el CV antiguo.
+- Foto de perfil: `yo.png`, la foto casual en la nieve. No es un retrato
+  profesional.
+- Menú **en inglés** (Bio, Papers, Talks, News, Experience, Projects, Courses)
+  sobre un sitio en español; "Papers", "Talks" y "News" apuntan a anclas
+  inexistentes.
+- `content/` conserva **todo el contenido demo de Hugo Blox**: posts
+  (`get-started`, `second-brain`, `teach-courses`…), un curso completo sobre
+  Hugo Blox, publicaciones falsas (`conference-paper`, `journal-article`,
+  `preprint`), proyectos `pandas`/`pytorch`/`scikit` y un evento de ejemplo.
+  Además, esos posts **rompen el build** al intentar descargar imágenes remotas
+  de Unsplash y HuggingFace.
+
+**e) El diseño sí sirve.** Una vez corregido el idioma y quitado el contenido
+demo, la plantilla renderiza bien: limpia, moderna, con dark mode, selector de
+tema y conmutador de idioma. **Recomendación: conservar el tema, rehacer el
+contenido.**
+
+> ⚠️ **Riesgo activo:** esta es la misma rama que Netlify tiene configurada como
+> producción. El commit publicado es anterior a la migración, así que en vivo se
+> ve la versión Academic — pero **cualquier deploy nuevo de esta rama publicaría
+> el email y el LinkedIn equivocados**. Estabilizar la rama de producción
+> (hallazgo #6) es urgente por este motivo, no solo por higiene.
+
+### 2.7 🆕 Revisar antes de republicar
 
 No hay cifras internas ni datos de NS Agro en el repo. Pero conviene el criterio
 de Oscar sobre:
@@ -412,7 +501,11 @@ Sujeta a la decisión de audiencia. Estructura base:
    es tuyo, ¿quieres mostrarlo en el sitio nuevo o dejarlo fuera?**
 2. ⚠️ **¿Terminamos y desplegamos la migración a Hugo Blox que quedó a medias, o
    la descartamos?** (§1.1 estado C, §4.1)
-3. ¿Certificaciones SAP vigentes y años exactos por cargo en NS Agro?
+3. ¿Certificaciones SAP vigentes? *(Los años por cargo ya están resueltos —
+   ver la tabla de §1.3.)*
+   - ¿El cambio de nombre a Martínez y Valdivieso es un rebrand del holding
+     completo o solo de la filial operativa? Define cómo se nombra la empresa
+     en el hero y en el timeline.
 4. ¿Qué proyectos de NS Agro son mostrables públicamente y con qué nivel de detalle?
 5. ¿Objetivo real del sitio: buscar oportunidades, o presencia profesional estable?
 6. ¿Existe foto profesional o hay que producirla? *(La actual es una foto de
