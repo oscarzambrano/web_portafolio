@@ -1,59 +1,98 @@
+# Configuración de build para Netlify
+# Documentación: https://docs.netlify.com/configure-builds/file-based-configuration/
+
 [build]
+  publish = "public"
+  # Producción: sin -b. El baseURL sale de config/_default/hugo.yaml, que es la
+  # única fuente de verdad. Pasar -b $URL aquí haría que el sitio dependa de una
+  # variable de Netlify y que un build local produzca URLs distintas.
   command = """
     set -e
-    echo "=== Starting Blog build process ==="
-    echo "Node version: $(node --version)"
-    echo "pnpm version: $(pnpm --version)"
-    echo "Hugo version: $(hugo version)"
-    echo "Go version: $(go version || echo 'Go not available')"
-    
-    echo "=== Installing dependencies ==="
-    pnpm install --verbose --no-frozen-lockfile
-    
-    echo "=== Running Hugo build ==="
-    hugo --gc --minify -b $URL --logLevel debug --printI18nWarnings --printPathWarnings
-    
-    echo "=== Running Pagefind indexing ==="
-    pnpm dlx pagefind --source 'public' --verbose
-    
-    echo "=== Build completed successfully ==="
+    pnpm install --no-frozen-lockfile
+    hugo --gc --minify
   """
-  publish = "public"
 
 [build.environment]
+  # Debe coincidir con hugoblox.yaml.
   HUGO_VERSION = "0.152.2"
-  GO_VERSION = "1.21.5"
+  # Hugo resuelve el tema vía módulos Go (ver go.mod), así que Go es obligatorio.
+  GO_VERSION = "1.22.5"
   NODE_VERSION = "22"
   HUGO_ENABLEGITINFO = "true"
-  HUGO_LOG_I18N_WARNINGS = "true"
-  HUGO_LOG_WARNINGS = "true"
-  FORCE_COLOR = "1"
-  PNPM_LOG_LEVEL = "debug"
 
 [context.production.environment]
-  HUGO_ENV = "production"
+  # Nombre moderno de la variable. `HUGO_ENV` quedó obsoleto y Hugo lo ignora.
+  HUGO_ENVIRONMENT = "production"
 
+# Previews de PR y de rama: aquí el baseURL sí debe ser el de la preview, o los
+# enlaces internos apuntarían a producción.
 [context.deploy-preview]
   command = """
     set -e
-    echo "=== Deploy Preview Build ==="
-    echo "Deploy URL: $DEPLOY_PRIME_URL"
-    pnpm install --verbose --no-frozen-lockfile
-    hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --logLevel debug --printI18nWarnings --printPathWarnings
-    pnpm dlx pagefind --source 'public' --verbose
+    pnpm install --no-frozen-lockfile
+    hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL
   """
+
+[context.deploy-preview.environment]
+  HUGO_ENVIRONMENT = "preview"
 
 [context.branch-deploy]
   command = """
     set -e
-    echo "=== Branch Deploy Build ==="
-    echo "Deploy URL: $DEPLOY_PRIME_URL"
-    pnpm install --verbose --no-frozen-lockfile
-    hugo --gc --minify -b $DEPLOY_PRIME_URL --logLevel debug --printI18nWarnings --printPathWarnings
-    pnpm dlx pagefind --source 'public' --verbose
+    pnpm install --no-frozen-lockfile
+    hugo --gc --minify -b $DEPLOY_PRIME_URL
   """
+
+[context.branch-deploy.environment]
+  HUGO_ENVIRONMENT = "preview"
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
   [plugins.inputs]
-    debug = true
+    debug = false
+
+# ── Redirecciones ───────────────────────────────────────────────────────────
+# El sitio de 2017-2019 servía el contenido bajo /es/ y /en/. Hoy el español se
+# sirve en la raíz: esas rutas se redirigen en vez de devolver 404.
+[[redirects]]
+  from = "/es/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/"
+  status = 301
+  force = true
+
+# ── Cabeceras ───────────────────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # HTTPS obligatorio durante un año, subdominios incluidos.
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# El HTML se revalida siempre: es lo que hace que un deploy se vea al instante.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

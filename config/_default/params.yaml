@@ -15,9 +15,12 @@ hugoblox:
     # Display name shown in navbar and general site display
     name: "Oscar Zambrano"
     # Optional: Browser tab title (defaults to name if not set)
-    site_title: "Oscar Zambrano | Subgerente Data Analytics e IA"
+    site_title: "Oscar Zambrano — Subgerente Data Analytics e IA"
     # Optional: Legal/copyright entity (defaults to name if not set)
-    organization: "NS Agro S.A."
+    # Entidad de copyright del pie. Es un sitio personal: el titular es
+    # Oscar, no su empleador. El empleador se muestra en el perfil,
+    # desde content/authors/admin/_index.md.
+    organization: "Oscar Zambrano"
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -61,7 +64,7 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    description: 'Oscar Zambrano - Subgerente de Data Analytics e Inteligencia Artificial en NS Agro. Especialista en SAP BTP, Machine Learning e IA Generativa. Ganador SAP NOW Chile 2024.'
+    description: 'Oscar Zambrano, Subgerente de Data Analytics e Inteligencia Artificial en Martínez y Valdivieso (NS Agro), Chile. Machine learning y LLMs en producción sobre SAP BTP y SAP HANA Cloud para el agro.'
     twitter: ''
     llm:
       allow:
@@ -88,9 +91,13 @@ header:
     enable: true
     block: 'navbar'
     fixed_to_top: true
-    show_search: true
+    # Buscador: un sitio de dos páginas no lo necesita, y evita depender de
+    # pagefind en el build.
+    show_search: false
     show_mode_toggle: true
-    show_theme_picker: true
+    # Selector de paleta: es una función de demo de la plantilla. Además su
+    # etiqueta está hardcodeada en inglés en el tema.
+    show_theme_picker: false
 
 # ==============================================================================
 # SITE FOOTER
@@ -98,12 +105,10 @@ header:
 footer:
   copyright:
     # Use {year} for current year, {name} for branding.organization, {license} for CC license link
-    notice: '© {year} {name}. This work is licensed under {license}'
+    notice: '© {year} {name}'
     license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+      # Un CV personal no necesita insignia de licencia Creative Commons.
+      enable: false
 
 # ==============================================================================
 # LOCALIZATION

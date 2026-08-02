@@ -5,8 +5,11 @@
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: 'Oscar Zambrano'
-# Website URL
-baseURL: 'https://oscar-zambrano.netlify.app/'
+# URL del sitio.
+#   DEBE ser el dominio propio y absoluto: de aquí salen los canonical, las URL
+#   del sitemap y las de Open Graph. Apuntarlo a un *.netlify.app manda a Google
+#   la señal de que el sitio canónico es otro.
+baseURL: 'https://www.oscarzambrano.name/'
 
 ############################
 ## LANGUAGE
@@ -41,10 +44,11 @@ imaging:
   anchor: smart
   hint: picture
 timeout: 600000
+# Solo `authors`, que el tema necesita para el perfil.
+#   `tags` y `publication_types` venían de la plantilla y, sin contenido que
+#   los use, generaban páginas vacías que igual entraban al sitemap.
 taxonomies:
   author: authors
-  tag: tags
-  publication_type: publication_types
 markup:
   _merge: deep
   highlight:

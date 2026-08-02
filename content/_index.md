@@ -1,26 +1,24 @@
 ---
-# Leave the homepage title empty to use the site title
+# Deja el título vacío para usar el del sitio
 title: ''
-date: 2025-01-01
+date: 2026-08-02
 type: landing
 
 design:
-  # Default section spacing
   spacing: '6rem'
 
 sections:
+  # ── Perfil ────────────────────────────────────────────────────────────────
   - block: resume-biography-3
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
-      # Show a call-to-action button under your biography? (optional)
       button:
-        text: Descargar CV
-        url: https://drive.google.com/open?id=1343BInJybFxvWUXvcRyLE-FkBJjC5RDz
+        text: Hablemos
+        url: 'mailto:oscar.zambrano.cl@gmail.com'
       headings:
-        about: 'Sobre mí'
-        education: 'Educación'
+        about: 'Perfil'
+        education: 'Formación'
         interests: 'Intereses'
     design:
       background:
@@ -30,86 +28,97 @@ sections:
         size: large
         shape: circle
 
+  # ── Referencia SAP 1 de 2: SAP HANA Cloud vector engine ───────────────────
+  # Todo lo que sigue está publicado por SAP. No se añade ninguna cifra
+  # interna ni detalle de arquitectura que no esté ya en esas fuentes.
   - block: markdown
+    id: proyecto
     content:
-      title: '🏆 Logros Destacados 2024'
-      subtitle: ''
+      title: 'Precios asistidos por IA para una fuerza de venta en terreno'
       text: |-
-        ## Ganador Torneo de Innovación SAP NOW Chile 2024
+        *Caso publicado por SAP — SAP HANA Cloud vector engine.*
 
-        Desarrollé una solución de **IA Generativa** con arquitectura **No-Code/Low-Code** que clasificó para representar a Chile en la competencia regional LAC.
+        **El problema.** Más del 95 % de la fuerza de venta de Martínez y
+        Valdivieso trabaja en terreno, con conectividad intermitente y sin
+        acceso cómodo a los sistemas centrales. Cotizar bien exige considerar
+        al cliente, su historial y su riesgo — en un mercado de márgenes
+        estrechos donde cada variable de la negociación mueve la rentabilidad.
 
-        - Prototipo funcional desarrollado en **2 días**
-        - Reconocimiento por SAP a nivel corporativo
-        - Proyecto featured en [La Quinta Emprende](https://laquintaemprende.cl/2024/09/ns-agro-gana-torneo-de-innovacion-en-sap-now-chile-2024/)
+        **El enfoque.** El vendedor envía un mensaje de texto o de voz con los
+        productos y las condiciones de pago. Un bot transcribe el audio, y un
+        modelo de machine learning alojado en SAP BTP arma la cotización
+        cruzando esos datos con el *vector engine* de SAP HANA Cloud.
 
-        ## SAP HANA Vector Engine Early Adopter
+        **El resultado.** El precio se genera para cada cliente concreto, a
+        partir del detalle del pedido, su historial de compras y su
+        clasificación crediticia. La fuerza de venta remota puede cotizar en el
+        momento, y la empresa sostiene su rentabilidad mientras crece.
 
-        Participación en programa exclusivo de **Early Adopters** de SAP para tecnologías de vectores y embeddings, aplicando **RAG** (Retrieval-Augmented Generation) y **LLMs** en producción.
+        **Tecnologías.** SAP HANA Cloud (*vector engine* y librerías de machine
+        learning embebidas, accesibles desde R y Python), SAP BTP, modelo
+        entrenado por el equipo interno.
+
+        **Publicado por SAP:**
+        [caso de cliente — vector engine](https://www.sap.com/assetdetail/2025/06/54beee34-187f-0010-bca6-c68f7e60039b.html) ·
+        [Martínez y Valdivieso, cotizaciones a tiempo](https://www.sap.com/asset/dynamic/2025/08/b83db80d-1a7f-0010-bca6-c68f7e60039b.html) ·
+        [SAP News Latinoamérica](https://news.sap.com/latinamerica/2025/01/ns-agro-lidera-transformacion-digital-de-martinez-y-valdivieso-con-sap-en-ia/)
+
+        **En medios:**
+        [Cooperativa](https://www.cooperativa.cl/noticias/corporativo/especiales/sap/tecnologia-sap-basada-en-ia-ns-agro-lidera-la-transformacion-digital-de/2025-05-05/175725.html) ·
+        [Portal Agro Chile](https://www.portalagrochile.cl/2025/01/06/ns-agro-lidera-la-transformacion-digital-de-martinez-y-valdivieso-con-tecnologia-sap-basada-en-ia/) ·
+        [Portal Innova](https://portalinnova.cl/ns-agro-lidera-la-transformacion-digital-de-martinez-y-valdivieso-con-tecnologia-sap-basada-en-ia/) ·
+        [BNamericas](https://www.bnamericas.com/en/news/ns-agro-leads-the-digital-transformation-of-martinez-y-valdivieso-with-ai-based-sap-technology)
+    design:
+      columns: '1'
+
+  # ── Referencia SAP 2 de 2: Torneo de Innovación SAP NOW Chile 2024 ────────
+  - block: markdown
+    id: reconocimientos
+    content:
+      title: 'Torneo de Innovación SAP NOW Chile 2024'
+      text: |-
+        NS Agro ganó la final frente a **Arauco** con una solución de IA
+        generativa de componente *no-code/low-code*, en un formato
+        *reverse shark-tank* donde un jurado de startups evaluó a las empresas
+        participantes. El triunfo dio el paso a la fase regional de
+        Latinoamérica, junto a México, Brasil, Colombia y Argentina.
+
+        La solución optimizaba precios para dar competitividad en un mercado de
+        márgenes muy estrechos, donde la capacidad de negociación es clave y
+        cada variable comercial impacta la rentabilidad.
+
+        Participé en el equipo ganador como **científico de datos y
+        especialista en IA**. Sobre el reto, lo resumí entonces en una frase:
+        lo más difícil fue *entender el problema que se nos planteaba*.
+
+        **Publicado por SAP:**
+        [SAP News Latinoamérica](https://news.sap.com/latinamerica/2024/09/ns-agro-gana-torneo-innovacion-en-sap-now-chile/)
+
+        **En medios chilenos:**
+        [Cooperativa](https://cooperativa.cl/noticias/corporativo/especiales/sap-now-chile/ia-e-innovacion-sap-now-chile-reunio-a-lo-mas-destacado-en-tecnologia/2024-09-02/140841.html) ·
+        [Tekios](https://tekiosmag.com/2024/09/06/ns-agro-gana-torneo-de-innovacion-en-sap-now-chile/) ·
+        [La Quinta Emprende](https://laquintaemprende.cl/2024/09/ns-agro-gana-torneo-de-innovacion-en-sap-now-chile/) ·
+        [Gerencia](https://www.gerencia.cl/innovation/innovacion-empresarial-sap-destaca-rol-de-la-tecnologia/) ·
+        [ITSitio Chile](https://www.itsitio.com/ch/eventos/sap-now-en-chile-la-empresa-mostro-innovacion-y-el-futuro-de-la-digitalizacion-en-las-organizaciones/)
     design:
       columns: '1'
       background:
         color: '#f3f4f6'
 
+  # ── Contacto ──────────────────────────────────────────────────────────────
   - block: markdown
+    id: contacto
     content:
-      title: '💼 Experiencia Profesional'
-      subtitle: ''
+      title: 'Contacto'
       text: |-
-        ### NS Agro S.A. | 2019 - Actualidad
+        Si trabajas en analítica sobre plataforma SAP, en IA aplicada al agro,
+        o quieres comentar algo de lo de arriba, escríbeme.
 
-        **Subgerente Data Analytics e IA** (2022 - Presente)
-        - Liderazgo de transformación digital con SAP BTP
-        - Implementación de arquitectura cloud-native en SAP Cloud Foundry
-        - Desarrollo de modelos ML en producción con SAP AI Core
+        [oscar.zambrano.cl@gmail.com](mailto:oscar.zambrano.cl@gmail.com) ·
+        [LinkedIn](https://www.linkedin.com/in/oscarzambranoparra) ·
+        [GitHub](https://github.com/oscarzambrano)
 
-        **Jefe de Ciencia de Datos** (2020 - 2021)
-        - Liderazgo de equipo de Data Science (2+ personas)
-        - Implementación de modelos predictivos empresariales
-
-        **Data Scientist** (2019 - 2020)
-        - Desarrollo de dashboards ejecutivos con SAP Analytics Cloud
-        - Análisis de datos y modelado estadístico
-    design:
-      columns: '1'
-
-  - block: markdown
-    content:
-      title: '🛠️ Stack Tecnológico'
-      subtitle: ''
-      text: |-
-        #### SAP Business Technology Platform
-        - **SAP BTP Cloud Foundry Runtime**: Arquitectura cloud-native
-        - **SAP HANA Cloud**: Data modeling, in-memory computing
-        - **SAP Data Sphere**: Enterprise data architecture
-        - **SAP Analytics Cloud**: Dashboards ejecutivos
-        - **SAP AI Core & Launchpad**: MLOps, model deployment
-        - **SAP HANA Vector Engine**: Embeddings, RAG (Early Adopter)
-
-        #### Cloud & DevOps
-        - **AWS**: EC2, ECR, S3
-        - **Docker & Kubernetes**: Containerización
-        - **Posit Workbench, Jupyter, VS Code**
-        - **Atlassian Suite**: Jira, Confluence, Bitbucket
-
-        #### Machine Learning & IA
-        - **LLMs & IA Generativa**: Fine-tuning, RAG, Prompt Engineering
-        - **Frameworks**: TensorFlow, PyTorch, Scikit-learn
-        - **Hugging Face Transformers**
-        - **MLOps**: CI/CD para modelos ML
-    design:
-      columns: '2'
-      background:
-        color: '#ffffff'
-
-  - block: markdown
-    content:
-      title: '📬 Contacto'
-      subtitle: ''
-      text: |-
-        ¿Interesado en colaborar en proyectos de **IA Generativa**, **SAP BTP** o **Transformación Digital**?
-
-        Contáctame vía [LinkedIn](https://www.linkedin.com/in/oscarzambranoa) o [email](mailto:oscarzambranoa@gmail.com).
+        Santiago, Chile.
     design:
       columns: '1'
       background:

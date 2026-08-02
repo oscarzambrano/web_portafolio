@@ -125,20 +125,65 @@ falso, hay **un hueco de ~7 años**.
 - Stack: SAP BTP Cloud Foundry, SAP HANA, SAP Business Data Cloud, SAP Fiori/UI5,
   Machine Learning, LLMs, Python, R, SQL.
 - Credencial pública destacable: la empresa ganó el **SAP Innovation Tournament
-  en SAP NOW Chile (septiembre 2024)** con una solución de IA generativa; Oscar
-  aparece públicamente como Data Engineer del equipo ganador.
-  → VERIFICAR el link de la fuente y usarlo como prueba social enlazada.
-  → **Cuidado al redactar:** la fuente pública lo nombra *Data Engineer* del
-    equipo, y el ascenso a Subgerente es del mismo año (2024). Si el copy dice
-    "Subgerente" junto al enlace, un lector que lo abra verá otro cargo. Redacta
-    el reconocimiento por el rol que tuvo **en ese proyecto**, no por el cargo
-    actual, o aclara la fecha del ascenso. Confirmar con Oscar el orden exacto.
+  en SAP NOW Chile (septiembre 2024)** con una solución de IA generativa.
+  Fuentes verificadas y matiz sobre el rol: **§1.4**.
 
 **Vacíos a llenar con Oscar:** certificaciones SAP vigentes, idiomas
 actualizados, y qué proyectos puede mostrar públicamente.
-*(Formación académica en §1.4; años por cargo ya resueltos arriba.)*
+*(Formación académica en §1.5; años por cargo ya resueltos arriba.)*
 
-### 1.4 Trayectoria previa recuperable del repo (2012-2019)
+### 1.4 Fuentes públicas verificadas (2026-08-02)
+
+✅ **VERIFICADO por búsqueda web.** Estas son las referencias que el sitio puede
+enlazar como prueba social. Todas resuelven y hablan de Oscar o de su trabajo.
+
+**Referencia 1 — Torneo de Innovación, SAP NOW Chile (septiembre 2024)**
+
+- SAP News Latinoamérica —
+  `news.sap.com/latinamerica/2024/09/ns-agro-gana-torneo-innovacion-en-sap-now-chile/`
+- Medios chilenos: Cooperativa, Tekios, La Quinta Emprende, Gerencia,
+  ITSitio Chile, Portal Innova, TecNautas.
+
+Hechos publicados: NS Agro ganó la final frente a **Arauco**; formato
+*reverse shark-tank* con jurado de startups (Synaptic, WooCar, CryptoMate);
+ganó por el componente *no-code/low-code*; pasó a la fase regional junto a
+México, Brasil, Colombia y Argentina. La solución optimizaba precios.
+
+> ⚠️ **La fuente de SAP lo nombra "Óscar Zambrano, data engineer en NS Agro"** y
+> lo cita diciendo que lo más difícil fue *entender el problema que se les
+> planteaba*. Oscar confirma que su rol real en ese equipo fue **científico de
+> datos y especialista en IA**. El sitio usa el rol real y no reproduce la
+> etiqueta de la fuente; si alguien abre el enlace verá "data engineer". Es una
+> discrepancia conocida y aceptada, no un error a corregir.
+
+**Referencia 2 — SAP HANA Cloud vector engine (M&V, 2025)**
+
+- SAP, caso de cliente —
+  `sap.com/assetdetail/2025/06/54beee34-187f-0010-bca6-c68f7e60039b.html`
+- SAP, "Delivering timely customer quotes while improving profitability" —
+  `sap.com/asset/dynamic/2025/08/b83db80d-1a7f-0010-bca6-c68f7e60039b.html`
+  → **nombra a Oscar Zambrano como Chief of Data Analytics de M&V.**
+- SAP News Latinoamérica —
+  `news.sap.com/latinamerica/2025/01/ns-agro-lidera-transformacion-digital-de-martinez-y-valdivieso-con-sap-en-ia/`
+- Medios: Cooperativa, Portal Agro Chile, Portal Innova, BNamericas,
+  The Standard CIO, InnovaciónDigital360.
+
+Hechos publicados: más del 95 % de la fuerza de venta de M&V opera en terreno;
+el vendedor manda texto o audio; un bot transcribe; un modelo de ML en SAP BTP
+arma la cotización usando el *vector engine* de SAP HANA Cloud; el precio se
+calcula por cliente según pedido, historial y clasificación crediticia; el
+equipo interno entrena el modelo con las librerías de ML embebidas en HANA,
+accesibles desde R y Python. Operación en Chile y Perú.
+
+> **Consecuencia para la regla 3.** Este proyecto **sí es publicable**: lo
+> publicó SAP. La prohibición de datos internos sigue vigente para todo lo que
+> no esté en estas fuentes — cifras, clientes, esquemas, endpoints, subaccounts.
+
+**Corrección de una URL inventada.** La rama sin desplegar citaba
+`news.sap.com/latinamerica/2025/01/ns-agro-lidera-innovacion-agricola/`, que no
+existe. El hecho era real; el enlace, no. Sustituido por el correcto.
+
+### 1.5 Trayectoria previa recuperable del repo (2012-2019)
 
 ✅ **VERIFICADO** — está en `content/` de `master`. Pendiente de confirmación
 editorial de Oscar antes de publicarse.
@@ -524,3 +569,68 @@ Sujeta a la decisión de audiencia. Estructura base:
    teléfono de 2015, 300×300.)*
 7. ¿Mantener el teléfono personal publicado en el sitio?
 8. ¿Quién mantiene el sitio después? Define cuánta complejidad tolera el proyecto.
+
+---
+
+## 9. Estado del rediseño — qué ya está hecho
+
+✅ Aplicado en la rama `claude/oscarzambrano-handoff-audit-s1qu9p` el 2026-08-02.
+Se trajo aquí la migración a Hugo Blox (§1.1 estado C) y se corrigió. **Build
+verificado localmente con Hugo Extended 0.152.2: limpio, sin errores ni
+warnings.**
+
+### Correcciones de fondo
+
+| Qué | Antes | Ahora |
+|---|---|---|
+| Email | `oscarzambranoa@gmail.com` (no existe) | `oscar.zambrano.cl@gmail.com` |
+| LinkedIn | `/in/oscarzambranoa` (no existe) | `/in/oscarzambranoparra` |
+| Build | Abortaba: `defaultContentLanguage: es` sin idioma `es` | Compila |
+| `baseURL` | `oscar-zambrano.netlify.app` | `www.oscarzambrano.name` |
+| Cronología | Subgerente 2022, Jefatura 2020-2021 | 2019 / 2020 / 2024 (§1.3) |
+| Bio | "más de 10 años de experiencia" | Redactada sobre hechos verificables |
+| URL del premio | `.../ns-agro-lidera-innovacion-agricola/` (inexistente) | Fuentes reales (§1.4) |
+| Botón CV | Apuntaba al PDF de Estadística de 2019 | Retirado hasta tener CV vigente |
+| Contenido | Plantilla demo de Hugo Blox completa | Solo contenido de Oscar |
+| Habilidades | Barras de 95 % / 100 % | Agrupadas, sin porcentajes |
+| Idioma | Menú en inglés, locale `en` fantasma | Todo en español, solo `es` |
+
+### Mejoras de diseño y SEO
+
+- **Foto**: se reemplazó la casual en la nieve por el retrato con traje
+  (recortado a 800×800 desde `Pic.jpg`, con relleno desenfocado a los lados).
+- **Tarjeta de Open Graph**: `assets/media/sharing.png`, 1200×630, con retrato,
+  nombre y cargo. Antes el `og:image` era el favicon.
+- **i18n**: `i18n/es.yaml` añade `experience`, que falta en el tema y hacía que
+  el encabezado saliera como "Experience".
+- **Fechas**: `date_format` era `'enero 2006'`, que no es un layout válido de Go
+  e imprimía la palabra literal. Ahora es `'2006'`.
+- **Sitemap**: pasó de incluir taxonomías vacías a 2 URLs reales, absolutas.
+- **Netlify**: HSTS añadido; 301 desde `/es/*` y `/en/*`; `HUGO_VERSION` 0.120.4
+  → 0.152.2; `HUGO_ENV` (obsoleto) → `HUGO_ENVIRONMENT`; producción sin `-b`
+  para que el `baseURL` del config sea la única fuente de verdad.
+- **Simplificación**: se apagaron el buscador y el selector de paleta (funciones
+  de demo; el selector además tiene su etiqueta hardcodeada en inglés). Con eso
+  desapareció la dependencia de pagefind en el build.
+- **Pie**: decía `© 2026 Martínez y Valdivieso` — atribuía el sitio personal al
+  empleador. Ahora `© 2026 Oscar Zambrano`, sin insignia Creative Commons.
+- **Repo**: se dejó de versionar `public/` (6,1 MB), y se eliminaron `fonts/`
+  (1,7 MB sin uso), `themes/`, `MyCV.Rproj`, `index.Rmd` y las imágenes viejas.
+  El árbol de trabajo pasó de ~12 MB a ~250 KB.
+
+### Responsive verificado
+
+Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
+`scrollWidth` vs `clientWidth`).
+
+### Lo que queda pendiente
+
+1. **Desplegar.** Netlify sigue apuntando a `claude/analyze-repository-…`. Hay
+   que mover la rama de producción a una estable y borrar la de Claude.
+2. **Foto actual.** La que se usa es de 2015. Es la mejor disponible, no una
+   buena foto.
+3. **CV en PDF vigente.** No hay ninguno; por eso se retiró el botón.
+4. **Lighthouse** contra producción, una vez desplegado.
+5. **Etapa 2012-2019** (§1.5): sigue fuera del sitio, a la espera de la decisión
+   editorial de Oscar. Hoy el sitio salta de la titulación (2014) a 2019.
+6. **Certificaciones SAP e idiomas**: no se publican por falta de datos.

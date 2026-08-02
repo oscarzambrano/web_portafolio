@@ -1,4 +1,17 @@
+# Salida del build (Hugo la regenera; Netlify la construye en cada deploy)
+/public/
+/resources/
+.hugo_build.lock
+
+# Dependencias
+/node_modules/
+
+# R / RStudio (restos del stack blogdown anterior)
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Generado por Hugo para el soporte de JS en editores
+/assets/jsconfig.json
+hugo_stats.json

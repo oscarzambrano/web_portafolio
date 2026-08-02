@@ -1,0 +1,19 @@
+# Traducciones que faltan en el tema (blox-tailwind).
+#   El es.yaml del módulo define `education` y `present`, pero no `experience`,
+#   así que el bloque resume-experience caía al inglés ("Experience").
+#   Hugo fusiona este archivo sobre el del módulo.
+
+- id: experience
+  translation: Experiencia
+
+- id: skills
+  translation: Capacidades
+
+- id: awards
+  translation: Reconocimientos
+
+- id: accomplishments
+  translation: Logros
+
+- id: languages
+  translation: Idiomas
