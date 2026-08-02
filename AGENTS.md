@@ -111,6 +111,21 @@ Definido en `netlify.toml`. `publish = "public"`.
 | CV en PDF | `static/cv/oscar-zambrano-cv.pdf` |
 | Plantilla y generador del CV | `tools/cv/` |
 | Build, redirecciones y cabeceras | `netlify.toml` |
+| Pruebas de concepto (código y README) | `poc/` |
+| Figuras generadas por los PoC | `static/poc/<slug>/` |
+| Página que los presenta | `content/proyectos.md` |
+
+## Pruebas de concepto (`poc/`)
+
+Demostraciones ejecutables sobre **datos sintéticos**. Reglas:
+
+- **Nunca datos reales de una empresa.** Ni cifras, ni clientes, ni proveedores.
+  Simular además permite medir si el método recupera la verdad conocida, que es
+  la única forma de demostrar rigor sin exponer nada.
+- **Semilla fija y `requirements.txt`** en cada uno: si no se reproduce, no vale.
+- Las figuras se generan en `static/poc/<slug>/` para que Hugo las sirva y los
+  README las referencien con rutas relativas dentro del repositorio.
+- Regenera las figuras en el mismo cambio en que toques un script.
 
 ## Trampas conocidas
 

@@ -104,8 +104,9 @@ sections:
         [ITSitio Chile](https://www.itsitio.com/ch/eventos/sap-now-en-chile-la-empresa-mostro-innovacion-y-el-futuro-de-la-digitalizacion-en-las-organizaciones/)
     design:
       columns: '1'
-      background:
-        color: '#f3f4f6'
+      # OJO: no fijes aquí un color de fondo. Un valor como '#f3f4f6' no cambia
+      # con el tema: en modo oscuro el texto se aclara pero el fondo sigue
+      # claro, y la sección queda ilegible. Deja que el tema lo resuelva.
 
   # ── Contacto ──────────────────────────────────────────────────────────────
   - block: markdown

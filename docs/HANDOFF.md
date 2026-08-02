@@ -671,3 +671,28 @@ Sin desborde horizontal en **360, 390, 768 y 1440 px** (medido con
 7. ~~Meses de los cargos en NS Agro.~~ ✅ Confirmados por Oscar: ingreso en
    noviembre 2019, Data Scientist hasta diciembre 2020, Subgerente desde
    marzo 2024.
+
+---
+
+## 10. Portafolio de pruebas de concepto
+
+El GitHub de Oscar no daba para un portafolio: de seis repositorios, cuatro
+están vacíos o son utilidades, uno (`ProgramacionLineal`) declara a **otra
+persona** como autora, y solo `MKS` tiene una aplicación real. Además `MKS` e
+`Iconos` exponen nombres de infraestructura interna de su etapa en Equifax
+(`Servidor 115`, `Servidor 130`, `Buro`), públicos desde 2017.
+
+→ **No enlaces esos repositorios desde el sitio sin que Oscar decida antes.**
+
+Se construyen PoC propios sobre datos sintéticos, en tres etapas.
+
+| Etapa | PoC | Estado |
+|---|---|---|
+| 1 | Punto de reorden y sugerido de compra | ✅ hecho |
+| 1 | Perfiles latentes, clusters y riesgo | ✅ hecho |
+| 2 | Grafos y redes de relaciones | pendiente |
+| 2 | Geolocalización de red celular | pendiente |
+| 3 | Control estadístico de procesos (Lean Six Sigma) | pendiente |
+| 3 | Control de actualización de datos (reescritura de `MKS`) | pendiente |
+
+El bilingüe ES/EN se hace **al final de la etapa 3**, para no traducir dos veces.

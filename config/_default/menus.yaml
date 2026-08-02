@@ -10,9 +10,12 @@ main:
   - name: Trayectoria
     url: /experiencia/
     weight: 20
+  - name: Pruebas de concepto
+    url: /proyectos/
+    weight: 30
   - name: Reconocimientos
     url: /#reconocimientos
-    weight: 30
+    weight: 40
   - name: Contacto
     url: /#contacto
-    weight: 40
+    weight: 50
