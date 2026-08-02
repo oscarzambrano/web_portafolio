@@ -1,0 +1,12 @@
+# Idiomas del sitio
+#   Documentación: https://docs.hugoblox.com/reference/language/
+#
+# El sitio es monolingüe (español). `defaultContentLanguage: es` en hugo.yaml
+# exige que 'es' esté definido aquí: si falta, Hugo aborta el build con
+#   "config value \"es\" for defaultContentLanguage does not match any language definition"
+# No declares un idioma sin contenido traducido: generaría rutas vacías
+# anunciando hreflang de un idioma que no existe.
+
+es:
+  languageCode: es-CL
+  languageName: Español

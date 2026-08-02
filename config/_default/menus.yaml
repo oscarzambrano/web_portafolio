@@ -1,0 +1,18 @@
+# Navegación principal
+#   `weight` define el orden. Las URL con `#` apuntan a bloques de la portada.
+#   Regla: no enlaces una sección que no exista — un menú con enlaces muertos
+#   es peor que un menú corto.
+
+main:
+  - name: Perfil
+    url: /
+    weight: 10
+  - name: Trayectoria
+    url: /experiencia/
+    weight: 20
+  - name: Reconocimientos
+    url: /#reconocimientos
+    weight: 30
+  - name: Contacto
+    url: /#contacto
+    weight: 40

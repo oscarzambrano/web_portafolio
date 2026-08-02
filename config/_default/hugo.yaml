@@ -1,0 +1,59 @@
+# Configuration of Hugo
+# Guide: https://docs.hugoblox.com/tutorial/
+# Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
+# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+
+# Website name (set in params.yaml under hugoblox.branding.name)
+title: 'Oscar Zambrano'
+# URL del sitio.
+#   DEBE ser el dominio propio y absoluto: de aquí salen los canonical, las URL
+#   del sitemap y las de Open Graph. Apuntarlo a un *.netlify.app manda a Google
+#   la señal de que el sitio canónico es otro.
+baseURL: 'https://www.oscarzambrano.name/'
+
+############################
+## LANGUAGE
+############################
+
+defaultContentLanguage: es
+hasCJKLanguage: false
+defaultContentLanguageInSubdir: false
+removePathAccents: true
+
+############################
+## ADVANCED
+############################
+
+build:
+  writeStats: true
+enableGitInfo: false
+summaryLength: 30
+pagination:
+  pagerSize: 10
+enableEmoji: true
+enableRobotsTXT: true
+footnotereturnlinkcontents: <sup>^</sup>
+ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+disableAliases: true
+outputs:
+  home: [HTML, RSS, headers, redirects, backlinks]
+  section: [HTML, RSS]
+imaging:
+  resampleFilter: lanczos
+  quality: 90
+  anchor: smart
+  hint: picture
+timeout: 600000
+# Solo `authors`, que el tema necesita para el perfil.
+#   `tags` y `publication_types` venían de la plantilla y, sin contenido que
+#   los use, generaban páginas vacías que igual entraban al sitemap.
+taxonomies:
+  author: authors
+markup:
+  _merge: deep
+  highlight:
+    lineNos: false
+security:
+  _merge: deep
+sitemap:
+  _merge: deep
