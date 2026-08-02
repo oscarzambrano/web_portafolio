@@ -8,7 +8,7 @@
   # variable de Netlify y que un build local produzca URLs distintas.
   command = """
     set -e
-    pnpm install --no-frozen-lockfile
+    npm ci --omit=dev
     hugo --gc --minify
   """
 
@@ -29,7 +29,7 @@
 [context.deploy-preview]
   command = """
     set -e
-    pnpm install --no-frozen-lockfile
+    npm ci --omit=dev
     hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL
   """
 
@@ -39,7 +39,7 @@
 [context.branch-deploy]
   command = """
     set -e
-    pnpm install --no-frozen-lockfile
+    npm ci --omit=dev
     hugo --gc --minify -b $DEPLOY_PRIME_URL
   """
 
