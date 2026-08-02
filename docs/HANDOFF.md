@@ -111,12 +111,14 @@ falso, hay **un hueco de ~7 años**.
 | Desde | Cargo | Empresa |
 |---|---|---|
 | 2019 | **Data Scientist** | NS Agro |
-| 2022 | **Jefatura de Data Analytics y Data Science** (como departamento) | NS Agro |
-| 2025 | **Subgerente de Data Analytics e IA** | NS Agro → Martínez y Valdivieso (2026) |
+| 2020 | **Jefatura de Data Analytics y Data Science** (como departamento) | NS Agro |
+| 2024 | **Subgerente de Data Analytics e IA** | NS Agro → Martínez y Valdivieso (2026) |
 
 > ⚠️ Esto **corrige** el borrador original, que situaba el paso a Subgerente en
 > ~junio 2026 y hablaba de "~6 años". Son **7 años** de trayectoria continua
-> (2019→2026) y el ascenso a Subgerente es de **2025**. Prevalece esta tabla.
+> (2019→2026), con **~4 años en la Jefatura** (2020-2024) y el ascenso a
+> Subgerente en **2024**. Prevalece esta tabla sobre cualquier otra fuente,
+> incluida la rama sin desplegar (§2.6).
 
 - Lidera un equipo de **2 personas** desde su rol de Jefatura.
 - Base: Chile.
@@ -126,6 +128,11 @@ falso, hay **un hueco de ~7 años**.
   en SAP NOW Chile (septiembre 2024)** con una solución de IA generativa; Oscar
   aparece públicamente como Data Engineer del equipo ganador.
   → VERIFICAR el link de la fuente y usarlo como prueba social enlazada.
+  → **Cuidado al redactar:** la fuente pública lo nombra *Data Engineer* del
+    equipo, y el ascenso a Subgerente es del mismo año (2024). Si el copy dice
+    "Subgerente" junto al enlace, un lector que lo abra verá otro cargo. Redacta
+    el reconocimiento por el rol que tuvo **en ese proyecto**, no por el cargo
+    actual, o aclara la fecha del ascenso. Confirmar con Oscar el orden exacto.
 
 **Vacíos a llenar con Oscar:** certificaciones SAP vigentes, idiomas
 actualizados, y qué proyectos puede mostrar públicamente.
@@ -307,9 +314,14 @@ Un portafolio con el contacto equivocado es peor que no tener portafolio.
 
 **c) Fechas de cargos inventadas.** La rama afirma Subgerente desde **enero
 2022**, "Jefe de Ciencia de Datos" 2020-2021 y Data Scientist solo durante 2019.
-Contrástalo con la tabla confirmada en §1.3: Subgerente es **2025** y la
-Jefatura **2022**. La titulación aparece fechada 2010-2015; `master` dice 2014.
-La bio abre con **"más de 10 años de experiencia"**, sin respaldo.
+Contrástalo con la tabla confirmada en §1.3: la Jefatura empieza en **2020** y
+**no termina en 2021** —se extiende hasta 2024—, el cargo se llama **Jefatura de
+Data Analytics y Data Science**, y el paso a Subgerente es de **2024**, no de
+2022. La titulación aparece fechada 2010-2015; `master` dice 2014. La bio abre
+con **"más de 10 años de experiencia"**, sin respaldo.
+
+> Ojo: el único dato que la rama acierta es el año de inicio (2019). Todo lo
+> demás está corrido. No la uses como fuente para el timeline.
 
 **d) Otros problemas de contenido:**
 
