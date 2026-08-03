@@ -84,15 +84,72 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: grafos
+    content:
+      title: 'Grafos y redes de relaciones'
+      text: |-
+        **El problema.** En una cartera de proveedores y clientes, las entidades
+        no son independientes: comparten domicilios, representantes, cuentas.
+        Una tabla las muestra como filas separadas; el grafo muestra que quince
+        de ellas son un mismo grupo económico. Eso cambia el riesgo de
+        concentración —creer que tienes quince proveedores cuando tienes uno—.
+
+        **El enfoque.** Detección de comunidades por modularidad sobre una red
+        de 110 entidades. A diferencia de un clustering clásico, no hay que
+        decirle cuántos grupos buscar: los determina la propia modularidad.
+
+        **El resultado.** Recupera la estructura con un índice de Rand de 0.97.
+        Pero el hallazgo está en otro lado: la correlación entre número de
+        relaciones e importancia estructural es solo **0.43**. La entidad E64
+        tiene grado 5 —de las menos conectadas— y es la quinta más crítica de
+        la red: es el único puente entre dos grupos. Un análisis ordenado por
+        número de relaciones nunca la habría visto.
+
+        ![Grado contra intermediación](/poc/grafos-relaciones/centralidad.png)
+
+        [Ver el código y el detalle →](https://github.com/oscarzambrano/web_portafolio/tree/master/poc/03-grafos-relaciones)
+    design:
+      columns: '1'
+
+  - block: markdown
+    id: geolocalizacion
+    content:
+      title: 'Geolocalización y cobertura celular'
+      text: |-
+        **El problema.** Una red de antenas no se evalúa por cuántas antenas
+        tiene, sino por a cuánta gente deja sin servicio. Un hueco sobre un
+        cerro deshabitado no importa; el mismo hueco sobre un barrio denso es
+        una avería comercial.
+
+        **El enfoque.** Propagación log-distancia sobre una ciudad sintética,
+        con sombreado log-normal **correlacionado entre enlaces** y pérdida de
+        penetración a interiores. Cobertura evaluada ponderada por población.
+
+        **El resultado.** Los huecos cubren 1.34 % del territorio pero solo
+        0.33 % de la población: la métrica de superficie **exagera el problema
+        cuatro veces**. El hallazgo accionable está en la carga — cinco de 46
+        antenas sirven al 31 % de la gente, tres veces el reparto uniforme.
+
+        ![Cobertura y población](/poc/geolocalizacion-celular/cobertura-poblacion.png)
+
+        **Dos correcciones al modelo.** Las primeras dos versiones daban cero
+        huecos, y las dos eran errores instructivos: la pérdida por distancia
+        sola nunca los produce, y el sombreado independiente por antena tampoco
+        —el móvil se queda con el máximo de 46 enlaces y la diversidad los
+        promedia—. Los huecos aparecen al modelar que el edificio que bloquea
+        al móvil lo bloquea en casi todas las direcciones.
+
+        [Ver el código y el detalle →](https://github.com/oscarzambrano/web_portafolio/tree/master/poc/04-geolocalizacion-celular)
+    design:
+      columns: '1'
+
+  - block: markdown
     id: proximas
     content:
       title: 'En preparación'
       text: |-
-        - **Grafos y redes de relaciones** — detección de comunidades sobre una
-          red de entidades.
-        - **Geolocalización de red celular** — cobertura y vecindad sobre mapa,
-          con datos abiertos de antenas.
-        - **Control estadístico de procesos** — cartas de control y capacidad.
+        - **Control estadístico de procesos** — cartas de control y capacidad,
+          el ángulo Lean Six Sigma.
         - **Control de actualización de datos** — tablero de seguimiento de
           procesos de carga.
     design:

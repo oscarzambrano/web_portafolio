@@ -6,19 +6,14 @@ de clientes, proveedores, precios ni infraestructura de ninguna empresa.
 
 Cada una es reproducible con semilla fija y se ejecuta con dos comandos.
 
-## Etapa 1 — disponible
+## Etapas 1 y 2 — disponibles
 
 | | Qué demuestra |
 |---|---|
 | [**01 · Punto de reorden y sugerido de compra**](01-punto-reorden/) | Política (s, S) bajo demanda sobredispersa y plazo de entrega variable. La frontera entre nivel de servicio e inventario inmovilizado. |
 | [**02 · Perfiles latentes, clusters y riesgo**](02-perfiles-latentes/) | Mezclas gaussianas para recuperar poblaciones ocultas en una cartera. Selección de K por BIC y comparación honesta contra k-means. |
-
-## Etapa 2 — planificada
-
-- **03 · Grafos y redes de relaciones** — detección de comunidades sobre una red
-  de entidades, y qué revela la estructura que no revela la tabla.
-- **04 · Geolocalización de red celular** — cobertura y vecindad sobre mapa, con
-  datos abiertos de antenas.
+| [**03 · Grafos y redes de relaciones**](03-grafos-relaciones/) | Detección de comunidades por modularidad. Por qué la entidad más crítica de una red puede ser una de las menos conectadas. |
+| [**04 · Geolocalización y cobertura celular**](04-geolocalizacion-celular/) | Propagación con sombreado correlacionado y cobertura ponderada por población, no por territorio. |
 
 ## Etapa 3 — planificada
 
