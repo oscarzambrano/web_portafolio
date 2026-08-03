@@ -690,8 +690,8 @@ Se construyen PoC propios sobre datos sintéticos, en tres etapas.
 |---|---|---|
 | 1 | Punto de reorden y sugerido de compra | ✅ hecho |
 | 1 | Perfiles latentes, clusters y riesgo | ✅ hecho |
-| 2 | Grafos y redes de relaciones | pendiente |
-| 2 | Geolocalización de red celular | pendiente |
+| 2 | Grafos y redes de relaciones | ✅ hecho |
+| 2 | Geolocalización de red celular | ✅ hecho |
 | 3 | Control estadístico de procesos (Lean Six Sigma) | pendiente |
 | 3 | Control de actualización de datos (reescritura de `MKS`) | pendiente |
 
